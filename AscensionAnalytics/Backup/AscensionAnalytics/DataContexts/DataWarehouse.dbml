@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="DataWarehouseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TypeOfService" Member="DataWarehouseTypeOfServices">
+    <Type Name="DataWarehouseTypeOfService">
+      <Column Name="TypeOfServiceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BETOSCode" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeOfService" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeOfServiceSubCategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeOfServiceCategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DataWarehouseTypeOfService_DataWarehouseService" Member="DataWarehouseServices" ThisKey="TypeOfServiceId" OtherKey="TypeOfServiceId" Type="DataWarehouseService" />
+      <Association Name="DataWarehouseTypeOfServiceCategory_DataWarehouseTypeOfService" Member="DataWarehouseTypeOfServiceCategory" ThisKey="TypeOfServiceCategoryId" OtherKey="TypeOfServiceCategoryId" Type="DataWarehouseTypeOfServiceCategory" IsForeignKey="true" />
+      <Association Name="DataWarehouseTypeOfServiceSubCategory_DataWarehouseTypeOfService" Member="DataWarehouseTypeOfServiceSubCategory" ThisKey="TypeOfServiceSubCategoryId" OtherKey="TypeOfServiceSubCategoryId" Type="DataWarehouseTypeOfServiceSubCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TypeOfServiceCategories" Member="DataWarehouseTypeOfServiceCategories">
+    <Type Name="DataWarehouseTypeOfServiceCategory">
+      <Column Name="TypeOfServiceCategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeOfServiceCategory" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Association Name="DataWarehouseTypeOfServiceCategory_DataWarehouseTypeOfService" Member="DataWarehouseTypeOfServices" ThisKey="TypeOfServiceCategoryId" OtherKey="TypeOfServiceCategoryId" Type="DataWarehouseTypeOfService" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TypeOfServiceSubCategories" Member="DataWarehouseTypeOfServiceSubCategories">
+    <Type Name="DataWarehouseTypeOfServiceSubCategory">
+      <Column Name="TypeOfServiceSubCategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeOfServiceSubCategory" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Association Name="DataWarehouseTypeOfServiceSubCategory_DataWarehouseTypeOfService" Member="DataWarehouseTypeOfServices" ThisKey="TypeOfServiceSubCategoryId" OtherKey="TypeOfServiceSubCategoryId" Type="DataWarehouseTypeOfService" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Diagnoses" Member="DataWarehouseDiagnoses">
+    <Type Name="DataWarehouseDiagnoses">
+      <Column Name="DiagnosisId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DiagnosisCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="DiagnosisFullDescription" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="DiagnosisAbbreviatedDescription" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DiagnosisDatasourceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiagnosisCategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiagnosisCodeTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DataWarehouseDatasources_DataWarehouseDiagnoses" Member="DataWarehouseDatasources" ThisKey="DiagnosisDatasourceId" OtherKey="DataSourceId" Type="DataWarehouseDatasources" IsForeignKey="true" />
+      <Association Name="DataWarehouseDiagnosisCategories_DataWarehouseDiagnoses" Member="DataWarehouseDiagnosisCategories" ThisKey="DiagnosisCategoryId" OtherKey="DiagnosisCategoryId" Type="DataWarehouseDiagnosisCategories" IsForeignKey="true" />
+      <Association Name="DataWarehouseDiagnosisCodeType_DataWarehouseDiagnoses" Member="DataWarehouseDiagnosisCodeType" ThisKey="DiagnosisCodeTypeId" OtherKey="DiagnosisCodeTypeId" Type="DataWarehouseDiagnosisCodeType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Datasources" Member="DataWarehouseDatasources">
+    <Type Name="DataWarehouseDatasources">
+      <Column Name="DataSourceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataSourceName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="DataSourceNotes" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="DataSourceDelivery" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DataSourceClaimsTableName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DataSourceWebsite" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="DataSourcePrimaryContact" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="DataSourceLastImport" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Association Name="DataWarehouseDatasources_DataWarehouseDiagnoses" Member="DataWarehouseDiagnoses" ThisKey="DataSourceId" OtherKey="DiagnosisDatasourceId" Type="DataWarehouseDiagnoses" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DiagnosisCategories" Member="DataWarehouseDiagnosisCategories">
+    <Type Name="DataWarehouseDiagnosisCategories">
+      <Column Name="DiagnosisCategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DiagnosisCategory" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="DiagnosisCodeRangeBegin" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="DiagnosisCodeRangeEnd" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="DataWarehouseDiagnosisCategories_DataWarehouseDiagnoses" Member="DataWarehouseDiagnoses" ThisKey="DiagnosisCategoryId" OtherKey="DiagnosisCategoryId" Type="DataWarehouseDiagnoses" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DiagnosisCodeTypes" Member="DataWarehouseDiagnosisCodeTypes">
+    <Type Name="DataWarehouseDiagnosisCodeType">
+      <Column Name="DiagnosisCodeTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DiagnosisCodeType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="DataWarehouseDiagnosisCodeType_DataWarehouseDiagnoses" Member="DataWarehouseDiagnoses" ThisKey="DiagnosisCodeTypeId" OtherKey="DiagnosisCodeTypeId" Type="DataWarehouseDiagnoses" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Services" Member="DataWarehouseServices">
+    <Type Name="DataWarehouseService">
+      <Column Name="ServiceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceDescription" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeOfServiceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceCodeTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DataWarehouseTypeOfService_DataWarehouseService" Member="DataWarehouseTypeOfService" ThisKey="TypeOfServiceId" OtherKey="TypeOfServiceId" Type="DataWarehouseTypeOfService" IsForeignKey="true" />
+      <Association Name="DataWarehouseServiceCodeType_DataWarehouseService" Member="DataWarehouseServiceCodeType" ThisKey="ServiceCodeTypeId" OtherKey="ServiceCodeTypeId" Type="DataWarehouseServiceCodeType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceCodeTypes" Member="DataWarehouseServiceCodeTypes">
+    <Type Name="DataWarehouseServiceCodeType">
+      <Column Name="ServiceCodeTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceCodeType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceCodeTypeDescription" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="DataWarehouseServiceCodeType_DataWarehouseService" Member="DataWarehouseServices" ThisKey="ServiceCodeTypeId" OtherKey="ServiceCodeTypeId" Type="DataWarehouseService" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Benefits" Member="DataWarehouseBenefits">
+    <Type Name="DataWarehouseBenefit">
+      <Column Name="BenefitId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BenefitCode" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="BenefitDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BenefitCategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsRxBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsMentalHealthBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsInpatientBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsOfficeVisitBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsEmergencyRoomBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="DataWarehouseBenefitCategory_DataWarehouseBenefit" Member="DataWarehouseBenefitCategory" ThisKey="BenefitCategoryId" OtherKey="BenefitCategoryId" Type="DataWarehouseBenefitCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BenefitCategories" Member="DataWarehouseBenefitCategories">
+    <Type Name="DataWarehouseBenefitCategory">
+      <Column Name="BenefitCategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BenefitCategory" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="DataWarehouseBenefitCategory_DataWarehouseBenefit" Member="DataWarehouseBenefits" ThisKey="BenefitCategoryId" OtherKey="BenefitCategoryId" Type="DataWarehouseBenefit" />
+    </Type>
+  </Table>
+</Database>

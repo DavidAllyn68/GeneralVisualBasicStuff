@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="HthBenefitMappingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.HTH_BenefitMapping" Member="HTH_BenefitMappings">
+    <Type Name="HTH_BenefitMapping">
+      <Column Name="HTHBenefitMappingId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HTH_Benefit_Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HTH_Place_Of_Service_Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AscensionBenefitId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="HTH_BENEFITS_HTH_BenefitMapping" Member="HTH_BENEFITS" ThisKey="HTH_Benefit_Code" OtherKey="BENEFIT_CODE" Type="HTH_BENEFITS" IsForeignKey="true" />
+      <Association Name="HTH_POS_HTH_BenefitMapping" Member="HTH_POS" ThisKey="HTH_Place_Of_Service_Code" OtherKey="PLACE_OF_SERVICE_CODE" Type="HTH_POS" IsForeignKey="true" />
+      <Association Name="HthMapping_AscensionBenefits_HTH_BenefitMapping" Member="HthMapping_AscensionBenefits" Storage="_HthMappingBenefits" ThisKey="AscensionBenefitId" OtherKey="BenefitId" Type="HthMapping_AscensionBenefits" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HTH_BENEFITS" Member="HTH_BENEFITS">
+    <Type Name="HTH_BENEFITS">
+      <Column Name="BENEFIT_CODE" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BENEFIT_DESCRIPTION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="HTH_BENEFITS_HTH_BenefitMapping" Member="HTH_BenefitMappings" ThisKey="BENEFIT_CODE" OtherKey="HTH_Benefit_Code" Type="HTH_BenefitMapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HTH_POS" Member="HTH_POS">
+    <Type Name="HTH_POS">
+      <Column Name="PLACE_OF_SERVICE_CODE" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PLACE_OF_SERVICE_DESCRIPTION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="HTH_POS_HTH_BenefitMapping" Member="HTH_BenefitMappings" ThisKey="PLACE_OF_SERVICE_CODE" OtherKey="HTH_Place_Of_Service_Code" Type="HTH_BenefitMapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Benefits" Member="HthMapping_AscensionBenefits">
+    <Type Name="HthMapping_AscensionBenefits">
+      <Column Name="BenefitId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BenefitCode" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="BenefitDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsRxBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsMentalHealthBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsInpatientBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsOfficeVisitBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsEmergencyRoomBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="HthMapping_AscensionBenefits_HTH_BenefitMapping" Member="HTH_BenefitMappings" ThisKey="BenefitId" OtherKey="AscensionBenefitId" Type="HTH_BenefitMapping" />
+    </Type>
+  </Table>
+</Database>

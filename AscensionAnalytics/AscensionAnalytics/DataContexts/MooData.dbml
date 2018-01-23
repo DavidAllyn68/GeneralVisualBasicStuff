@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="MooDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MOO_BenefitMapping" Member="MOO_BenefitMappings">
+    <Type Name="MOO_BenefitMapping">
+      <Column Name="MooDataId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MooBenefitCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="AscensionBenefitId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MooMapping_AscensionBenefits_MOO_BenefitMapping" Member="MooMapping_AscensionBenefits" Storage="_MooMappingBenefits" ThisKey="AscensionBenefitId" OtherKey="BenefitId" Type="MooMapping_AscensionBenefits" IsForeignKey="true" />
+      <Association Name="MOO_Benefit_MOO_BenefitMapping" Member="MOO_Benefit" ThisKey="MooBenefitCode" OtherKey="bencode" Type="MOO_Benefit" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MOO_Benefits" Member="MOO_Benefits">
+    <Type Name="MOO_Benefit">
+      <Column Name="bencode" Type="System.String" DbType="VarChar(25) NOT NULL" IsReadOnly="true" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="benefit_nme" Type="System.String" DbType="VarChar(100)" IsReadOnly="true" CanBeNull="true" />
+      <Association Name="MOO_Benefit_MOO_BenefitMapping" Member="MOO_BenefitMappings" ThisKey="bencode" OtherKey="MooBenefitCode" Type="MOO_BenefitMapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Benefits" Member="MooMapping_AscensionBenefits">
+    <Type Name="MooMapping_AscensionBenefits">
+      <Column Name="BenefitId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BenefitCode" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="BenefitDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsRxBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsMentalHealthBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsInpatientBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsOfficeVisitBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsEmergencyRoomBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="MooMapping_AscensionBenefits_MOO_BenefitMapping" Member="MOO_BenefitMappings" ThisKey="BenefitId" OtherKey="AscensionBenefitId" Type="MOO_BenefitMapping" />
+    </Type>
+  </Table>
+  <Function Name="dbo.MOOFileImport_ProcessDataTranslators" Method="MOOFileImport_ProcessDataTranslators">
+    <ElementType Name="MOOFileImport_ProcessDataTranslatorsResult">
+      <Column Name="MessageQueueId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MessageSubject" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBody" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="MessageSenderAddress" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageRecipientAddress" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageCreatedDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MessageScheduleDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MessageSentDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.MOOFileImport_LoadDenormForNightlyCompile" Method="MOOFileImport_LoadDenormForNightlyCompile">
+    <ElementType Name="MOOFileImport_LoadDenormForNightlyCompileResult">
+      <Column Name="MessageQueueId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MessageSubject" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBody" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="MessageSenderAddress" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageRecipientAddress" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageCreatedDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MessageScheduleDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MessageSentDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.MOOFileImport_FinishAndCleanUp" Method="MOOFileImport_FinishAndCleanUp">
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

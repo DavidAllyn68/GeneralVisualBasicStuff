@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="bsMilestoneSchedule.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>373, 17</value>
+  </metadata>
+  <metadata name="vsmMilestoneSchedule.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="schMilestoneSchedule_DesignTimeLayout.LayoutString" xml:space="preserve">
+    <value>&lt;ScheduleLayoutData&gt;&lt;Fields Collection="true" ElementName="Field"&gt;&lt;Field0 ID="AnalysisId"&gt;&lt;DataMember&gt;AnalysisId&lt;/DataMember&gt;&lt;Key&gt;AnalysisId&lt;/Key&gt;&lt;TypeCode&gt;Int32&lt;/TypeCode&gt;&lt;/Field0&gt;&lt;Field1 ID="Name"&gt;&lt;DataMember&gt;Name&lt;/DataMember&gt;&lt;Key&gt;Name&lt;/Key&gt;&lt;/Field1&gt;&lt;Field2 ID="Description"&gt;&lt;DataMember&gt;Description&lt;/DataMember&gt;&lt;Key&gt;Description&lt;/Key&gt;&lt;/Field2&gt;&lt;Field3 ID="Milestone"&gt;&lt;DataMember&gt;Milestone&lt;/DataMember&gt;&lt;Key&gt;Milestone&lt;/Key&gt;&lt;/Field3&gt;&lt;Field4 ID="MilestoneDate"&gt;&lt;DataMember&gt;MilestoneDate&lt;/DataMember&gt;&lt;Key&gt;MilestoneDate&lt;/Key&gt;&lt;TypeCode&gt;DateTime&lt;/TypeCode&gt;&lt;/Field4&gt;&lt;Field5 ID="RequestorId"&gt;&lt;DataMember&gt;RequestorId&lt;/DataMember&gt;&lt;Key&gt;RequestorId&lt;/Key&gt;&lt;TypeCode&gt;Int32&lt;/TypeCode&gt;&lt;/Field5&gt;&lt;Field6 ID="DirectoryFullPath"&gt;&lt;DataMember&gt;DirectoryFullPath&lt;/DataMember&gt;&lt;Key&gt;DirectoryFullPath&lt;/Key&gt;&lt;/Field6&gt;&lt;Field7 ID="StatusId"&gt;&lt;DataMember&gt;StatusId&lt;/DataMember&gt;&lt;Key&gt;StatusId&lt;/Key&gt;&lt;TypeCode&gt;Int32&lt;/TypeCode&gt;&lt;/Field7&gt;&lt;Field8 ID="RequestTypeId"&gt;&lt;DataMember&gt;RequestTypeId&lt;/DataMember&gt;&lt;Key&gt;RequestTypeId&lt;/Key&gt;&lt;TypeCode&gt;Int32&lt;/TypeCode&gt;&lt;/Field8&gt;&lt;Field9 ID="OpenDate"&gt;&lt;DataMember&gt;OpenDate&lt;/DataMember&gt;&lt;Key&gt;OpenDate&lt;/Key&gt;&lt;TypeCode&gt;DateTime&lt;/TypeCode&gt;&lt;/Field9&gt;&lt;Field10 ID="StartDate"&gt;&lt;DataMember&gt;StartDate&lt;/DataMember&gt;&lt;Key&gt;StartDate&lt;/Key&gt;&lt;TypeCode&gt;DateTime&lt;/TypeCode&gt;&lt;/Field10&gt;&lt;Field11 ID="EndDate"&gt;&lt;DataMember&gt;EndDate&lt;/DataMember&gt;&lt;Key&gt;EndDate&lt;/Key&gt;&lt;TypeCode&gt;DateTime&lt;/TypeCode&gt;&lt;/Field11&gt;&lt;Field12 ID="CloseDate"&gt;&lt;DataMember&gt;CloseDate&lt;/DataMember&gt;&lt;Key&gt;CloseDate&lt;/Key&gt;&lt;TypeCode&gt;DateTime&lt;/TypeCode&gt;&lt;/Field12&gt;&lt;Field13 ID="IsActive"&gt;&lt;DataMember&gt;IsActive&lt;/DataMember&gt;&lt;Key&gt;IsActive&lt;/Key&gt;&lt;TypeCode&gt;Byte&lt;/TypeCode&gt;&lt;/Field13&gt;&lt;Field14 ID="ModifiedByUser"&gt;&lt;DataMember&gt;ModifiedByUser&lt;/DataMember&gt;&lt;Key&gt;ModifiedByUser&lt;/Key&gt;&lt;/Field14&gt;&lt;Field15 ID="ModifiedTime"&gt;&lt;DataMember&gt;ModifiedTime&lt;/DataMember&gt;&lt;Key&gt;ModifiedTime&lt;/Key&gt;&lt;TypeCode&gt;DateTime&lt;/TypeCode&gt;&lt;/Field15&gt;&lt;Field16 ID="AnalysisRequestLogs"&gt;&lt;DataMember&gt;AnalysisRequestLogs&lt;/DataMember&gt;&lt;Key&gt;AnalysisRequestLogs&lt;/Key&gt;&lt;TypeCode&gt;Object&lt;/TypeCode&gt;&lt;/Field16&gt;&lt;Field17 ID="AnalysisRequestPeople"&gt;&lt;DataMember&gt;AnalysisRequestPeople&lt;/DataMember&gt;&lt;Key&gt;AnalysisRequestPeople&lt;/Key&gt;&lt;TypeCode&gt;Object&lt;/TypeCode&gt;&lt;/Field17&gt;&lt;Field18 ID="AnalysisRequestStatus"&gt;&lt;DataMember&gt;AnalysisRequestStatus&lt;/DataMember&gt;&lt;Key&gt;AnalysisRequestStatus&lt;/Key&gt;&lt;TypeCode&gt;Object&lt;/TypeCode&gt;&lt;/Field18&gt;&lt;Field19 ID="AnalysisRequestType"&gt;&lt;DataMember&gt;AnalysisRequestType&lt;/DataMember&gt;&lt;Key&gt;AnalysisRequestType&lt;/Key&gt;&lt;TypeCode&gt;Object&lt;/TypeCode&gt;&lt;/Field19&gt;&lt;/Fields&gt;&lt;FormatConditions Collection="true" ElementName="Condition"&gt;&lt;Condition0 ID="formatCondInactiveRequests"&gt;&lt;FieldIndex&gt;13&lt;/FieldIndex&gt;&lt;FormatStyle&gt;&lt;BackColor&gt;InactiveCaption&lt;/BackColor&gt;&lt;FontItalic&gt;True&lt;/FontItalic&gt;&lt;ForeColor&gt;InactiveCaptionText&lt;/ForeColor&gt;&lt;BackColorGradient&gt;GradientInactiveCaption&lt;/BackColorGradient&gt;&lt;/FormatStyle&gt;&lt;BorderColor&gt;InactiveBorder&lt;/BorderColor&gt;&lt;Key&gt;formatCondInactiveRequests&lt;/Key&gt;&lt;Value1&gt;0&lt;/Value1&gt;&lt;/Condition0&gt;&lt;/FormatConditions&gt;&lt;StartTimeMember&gt;MilestoneDate&lt;/StartTimeMember&gt;&lt;EndTimeMember&gt;MilestoneDate&lt;/EndTimeMember&gt;&lt;TextMember&gt;Milestone&lt;/TextMember&gt;&lt;OwnerMember&gt;AnalysisId&lt;/OwnerMember&gt;&lt;DescriptionMember&gt;Name&lt;/DescriptionMember&gt;&lt;WorkingHourSchema&gt;&lt;WorkingHoursRange Collection="true" ElementName="HourRange"&gt;&lt;HourRange0 ID="hrRngNormalWorkWeek"&gt;&lt;Key&gt;hrRngNormalWorkWeek&lt;/Key&gt;&lt;DayOfWeek&gt;Monday, Tuesday, Wednesday, Thursday, Friday&lt;/DayOfWeek&gt;&lt;StartTime&gt;07:00:00&lt;/StartTime&gt;&lt;EndTime&gt;18:00:00&lt;/EndTime&gt;&lt;/HourRange0&gt;&lt;/WorkingHoursRange&gt;&lt;/WorkingHourSchema&gt;&lt;/ScheduleLayoutData&gt;</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>69</value>
+  </metadata>
+</root>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/OverlandParkGroupMappingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c96543ce-6b2a-4ad0-bd2a-e26d38d9dc25" absoluteBounds="4.75, 2.5, 2.625, 1.3862939453125">
+      <DataClassMoniker Name="/OverlandParkGroupMappingDataContext/OverlandPark_GroupMapping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb85609e-af76-4ab0-a9f7-e7fe5fbd31bf" absoluteBounds="4.765, 2.96, 2.5949999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="21bd17bf-a0a9-44d3-bf75-ebc12b3bd53d" absoluteBounds="1.25, 1.125, 2.625, 1.3862939453125">
+      <DataClassMoniker Name="/OverlandParkGroupMappingDataContext/OverlandPark_Group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="104778d1-6bc4-4412-a738-942cee445c7c" absoluteBounds="1.265, 1.585, 2.5949999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.875 : 1.8124995); (6.0625 : 1.8124995); (6.0625 : 2.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OverlandParkGroupMappingDataContext/OverlandPark_Group/OverlandPark_Group_OverlandPark_GroupMapping" />
+      <nodes>
+        <classShapeMoniker Id="21bd17bf-a0a9-44d3-bf75-ebc12b3bd53d" />
+        <classShapeMoniker Id="c96543ce-6b2a-4ad0-bd2a-e26d38d9dc25" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

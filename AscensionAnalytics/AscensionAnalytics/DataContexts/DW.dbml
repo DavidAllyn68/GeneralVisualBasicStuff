@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="DWDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DW_Policies" Member="DW_Policies">
+    <Type Name="DW_Policy">
+      <Column Name="PolicyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PolicyAbbreviation" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="PolicyName" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UnderwriterId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PolicyYearId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EffectiveDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ExpirationDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OriginatingDataSourceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DW_Datasource_DW_Policy" Member="DW_Datasource" ThisKey="OriginatingDataSourceId" OtherKey="DataSourceId" Type="DW_Datasource" IsForeignKey="true" />
+      <Association Name="DW_Group_DW_Policy" Member="DW_Group" ThisKey="GroupId" OtherKey="GroupId" Type="DW_Group" IsForeignKey="true" />
+      <Association Name="DW_Underwriter_DW_Policy" Member="DW_Underwriter" ThisKey="UnderwriterId" OtherKey="UnderwriterId" Type="DW_Underwriter" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Datasources" Member="DW_Datasources">
+    <Type Name="DW_Datasource">
+      <Column Name="DataSourceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataSourceName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="DataSourceNotes" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="DataSourceDelivery" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DataSourceClaimsTableName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DataSourceWebsite" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="DataSourcePrimaryContact" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="DataSourceLastImport" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Association Name="DW_Datasource_DW_Policy" Member="DW_Policies" ThisKey="DataSourceId" OtherKey="OriginatingDataSourceId" Type="DW_Policy" />
+      <Association Name="DW_Datasource_DW_Group" Member="DW_Groups" ThisKey="DataSourceId" OtherKey="OriginatingDataSourceId" Type="DW_Group" />
+      <Association Name="DW_Datasource_DW_Underwriter" Member="DW_Underwriters" ThisKey="DataSourceId" OtherKey="OriginatingDataSourceId" Type="DW_Underwriter" />
+      <Association Name="DW_Datasource_DW_Client" Member="DW_Clients" ThisKey="DataSourceId" OtherKey="OriginatingDataSourceId" Type="DW_Client" />
+      <Association Name="DW_Datasource_DW_Population" Member="DW_Populations" ThisKey="DataSourceId" OtherKey="OriginatingDataSourceId" Type="DW_Population" />
+      <Association Name="DW_Datasource_DW_Product" Member="DW_Products" ThisKey="DataSourceId" OtherKey="OriginatingDataSourceId" Type="DW_Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DW_Groups" Member="DW_Groups">
+    <Type Name="DW_Group">
+      <Column Name="GroupId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupAbbreviation" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PopulationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OriginatingDataSourceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DW_Group_DW_Policy" Member="DW_Policies" ThisKey="GroupId" OtherKey="GroupId" Type="DW_Policy" />
+      <Association Name="DW_Datasource_DW_Group" Member="DW_Datasource" ThisKey="OriginatingDataSourceId" OtherKey="DataSourceId" Type="DW_Datasource" IsForeignKey="true" />
+      <Association Name="DW_Client_DW_Group" Member="DW_Client" ThisKey="ClientId" OtherKey="ClientId" Type="DW_Client" IsForeignKey="true" />
+      <Association Name="DW_Population_DW_Group" Member="DW_Population" ThisKey="PopulationId" OtherKey="PopulationId" Type="DW_Population" IsForeignKey="true" />
+      <Association Name="DW_Product_DW_Group" Member="DW_Product" ThisKey="ProductId" OtherKey="ProductId" Type="DW_Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DW_Underwriters" Member="DW_Underwriters">
+    <Type Name="DW_Underwriter">
+      <Column Name="UnderwriterId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UnderwriterAbbreviation" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="UnderwriterName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="OriginatingDataSourceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DW_Underwriter_DW_Policy" Member="DW_Policies" ThisKey="UnderwriterId" OtherKey="UnderwriterId" Type="DW_Policy" />
+      <Association Name="DW_Datasource_DW_Underwriter" Member="DW_Datasource" ThisKey="OriginatingDataSourceId" OtherKey="DataSourceId" Type="DW_Datasource" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DW_Clients" Member="DW_Clients">
+    <Type Name="DW_Client">
+      <Column Name="ClientId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientAbbreviation" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="OriginatingDataSourceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DW_Client_DW_Group" Member="DW_Groups" ThisKey="ClientId" OtherKey="ClientId" Type="DW_Group" />
+      <Association Name="DW_Datasource_DW_Client" Member="DW_Datasource" ThisKey="OriginatingDataSourceId" OtherKey="DataSourceId" Type="DW_Datasource" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DW_Populations" Member="DW_Populations">
+    <Type Name="DW_Population">
+      <Column Name="PopulationId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PopulationAbbreviation" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PopulationName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="OriginatingDataSourceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DW_Population_DW_Group" Member="DW_Groups" ThisKey="PopulationId" OtherKey="PopulationId" Type="DW_Group" />
+      <Association Name="DW_Datasource_DW_Population" Member="DW_Datasource" ThisKey="OriginatingDataSourceId" OtherKey="DataSourceId" Type="DW_Datasource" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DW_Products" Member="DW_Products">
+    <Type Name="DW_Product">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductAbbreviation" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="OriginatingDataSourceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DW_Product_DW_Group" Member="DW_Groups" ThisKey="ProductId" OtherKey="ProductId" Type="DW_Group" />
+      <Association Name="DW_Datasource_DW_Product" Member="DW_Datasource" ThisKey="OriginatingDataSourceId" OtherKey="DataSourceId" Type="DW_Datasource" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

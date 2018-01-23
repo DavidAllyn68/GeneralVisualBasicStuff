@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="AnalystsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Persist Security Info=True;User ID=claimsnet" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="ClaimsnetConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Analysts" Member="Analysts">
+    <Type Name="Analyst">
+      <Column Name="AnalystId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AnalysisPersonId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AnalystRoleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="AnalystAnalysisPeople_Analyst" Member="AnalystAnalysisPeople" ThisKey="AnalysisPersonId" OtherKey="PersonId" Type="AnalystAnalysisPeople" IsForeignKey="true" />
+      <Association Name="AnalystRole_Analyst" Member="AnalystRole" ThisKey="AnalystRoleId" OtherKey="AnalystRoleId" Type="AnalystRole" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnalysisPeople" Member="AnalystAnalysisPeoples">
+    <Type Name="AnalystAnalysisPeople">
+      <Column Name="PersonId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="PersonTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="WindowsUserName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="AnalystAnalysisPeople_Analyst" Member="Analysts" ThisKey="PersonId" OtherKey="AnalysisPersonId" Type="Analyst" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnalystRoles" Member="AnalystRoles">
+    <Type Name="AnalystRole">
+      <Column Name="AnalystRoleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AnalystRole" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DatabaseUsername" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DatabasePassword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="AnalystRole_Analyst" Member="Analysts" ThisKey="AnalystRoleId" OtherKey="AnalystRoleId" Type="Analyst" />
+    </Type>
+  </Table>
+</Database>

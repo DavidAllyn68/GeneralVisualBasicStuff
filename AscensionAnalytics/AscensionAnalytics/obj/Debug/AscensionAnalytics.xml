@@ -1,0 +1,239 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AscensionAnalytics
+</name>
+</assembly>
+<members>
+<member name="P:AscensionAnalytics.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AscensionAnalytics.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:AscensionAnalytics.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:AscensionAnalytics.BusinessBase.Changed(System.String)">
+	<summary>
+ Business Base Class event implementing the INotifyPropertyChanged.PropertyChanged event
+ </summary>
+	<param name="propertyName"></param>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.BusinessBase.IsDirty">
+	<summary>
+ Gets or Sets if the thing is dirty (changed in the collection by not the database).  True if changed.
+ Since the thing is now dirty, SaveSuccessfull property is set to false.
+ </summary>
+	<value>Boolean</value>
+	<returns>Boolean</returns>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.BusinessBase.SaveSuccessfull">
+	<summary>
+ Gets or Sets if the save action was successfull
+ If the save is successfull, IsDirty is set to false
+ </summary>
+	<value>Boolean</value>
+	<returns>Boolean</returns>
+	<remarks></remarks>
+</member><member name="T:AscensionAnalytics.BusinessBase.SaveActions">
+	<summary>
+ The various save actions available against the database.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.BusinessBase.SaveAction">
+	<summary>
+ Gets or Sets the save action of the thing against the database
+ </summary>
+	<value>thingSaveAction</value>
+	<returns>thingSaveAction</returns>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.BusinessBase.ReadyToSave">
+	<summary>
+ Gets or Sets if the item is ready to save
+ </summary>
+	<value>Boolean</value>
+	<returns>Boolean</returns>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.BusinessBase.ErrorItems">
+	<summary>
+ Gets the collection of item errors.
+ </summary>
+	<returns>ErrorItems</returns>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.BusinessBase.HasErrors">
+	<summary>
+ Gets whether the item has errors
+ </summary>
+	<returns>Boolean</returns>
+	<remarks></remarks>
+</member><member name="T:AscensionAnalytics.BusinessBase">
+	<summary>
+ The Business Base is a simple base object
+ </summary>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.BusinessItems`1.ErrorItems">
+	<summary>
+ Gets the error item collection for the schoolgroupGroupItems
+ </summary>
+	<returns>ErrorItem</returns>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.BusinessItems`1.SupportsSortingCore">
+	<summary>
+ Property allows list to be sorted by consuming controls such as the GridView
+ </summary>
+	<value></value>
+	<returns>Boolean</returns>
+	<remarks>Read Only</remarks>
+</member><member name="M:AscensionAnalytics.BusinessItems`1.Sort(System.String,System.ComponentModel.ListSortDirection)">
+	<summary>
+ Sorts the list based on a single field
+ </summary>
+	<param name="propertyName">The name of the property (often the database field) to be sorted on</param>
+	<param name="direction">System.ComponentModel.ListSortDirection enum value</param>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.ErrorItem.Code">
+	<summary>
+ Gets or Sets a custom error code
+ </summary>
+	<value>String</value>
+	<returns>String</returns>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.ErrorItem.Context">
+	<summary>
+ Gets or Sets the error context - an extra description for the specific item there is an error with.
+ </summary>
+	<value>String</value>
+	<returns>String</returns>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.ErrorItem.PropertyName">
+	<summary>
+ Gets or Sets the property name that has an error
+ </summary>
+	<value>String</value>
+	<returns>String</returns>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.ErrorItem.Description">
+	<summary>
+ Gets or Sets the error description
+ </summary>
+	<value>String</value>
+	<returns>String</returns>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ErrorItem.#ctor(System.String,System.String,System.String,System.String)">
+	<summary>
+ Creates a new error item for a given Code, Context, PropertyName, and Description.
+ </summary>
+	<param name="_code">String</param>
+	<param name="_context">String</param>
+	<param name="_propertyName">String</param>
+	<param name="_description">String</param>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ErrorItem.#ctor(System.String,System.String,System.String)">
+	<summary>
+ Creates a new error item for a given Context, PropertyName, and Description.
+ </summary>
+	<param name="_context">String</param>
+	<param name="_propertyName">String</param>
+	<param name="_description">String</param>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ErrorItem.#ctor(System.String,System.String)">
+	<summary>
+ Creates a new error item for a given Context and Description.
+ </summary>
+	<param name="_context">String</param>
+	<param name="_description">String</param>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ErrorItem.#ctor(System.String)">
+	<summary>
+ Creates a new error item for a given Description.
+ </summary>
+	<param name="_description">String</param>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ErrorItems.Create">
+	<summary>
+ Create a new instance of the object.
+ </summary>
+	<returns>ErrorItems</returns>
+	<remarks></remarks>
+</member><member name="P:AscensionAnalytics.ErrorItems.HasErrors">
+	<summary>
+ (Read Only) Determines if there are errors in the collection.
+ </summary>
+	<returns>Boolean</returns>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ErrorItems.getErrorItem(System.Object)">
+	<summary>
+ Returns an ErrorItem out of the ErrorItems collection for a given ErrorItem.
+ </summary>
+	<param name="_errorItem">ErrorItem</param>
+	<returns>ErrorItem</returns>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ErrorItems.getErrorItem(System.String)">
+	<summary>
+ Returns an ErrorItem out of the ErrorItems collection for a given error code.
+ </summary>
+	<param name="_code">String</param>
+	<returns>ErrorItem</returns>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ErrorItems.AddError(AscensionAnalytics.ErrorItem)">
+	<summary>
+ Adds an ErrorItem to the ErrorItems collection.
+ </summary>
+	<param name="_errorItem">ErrorItem</param>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ErrorItems.AddError(System.String,System.String,System.String,System.String)">
+	<summary>
+ Adds an ErrorItem to the ErrorItems collection by setting an ErrorItem's properties
+ </summary>
+	<param name="_code">String</param>
+	<param name="_context">String</param>
+	<param name="_propertyName">String</param>
+	<param name="_description">String</param>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ErrorItems.ClearError(AscensionAnalytics.ErrorItem)">
+	<summary>
+ Removes an ErrorItem from the collection.
+ </summary>
+	<param name="_errorItem">ErrorItem</param>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ErrorItems.ClearError(System.String)">
+	<summary>
+ Removes an ErrorItem from a collection for a given ErrorItem's code.
+ </summary>
+	<param name="_code">String</param>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ErrorItems.CompileErrors">
+	<summary>
+ Returns a listing of all error items in the collection.
+ </summary>
+	<returns>String</returns>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.Conversion.DisplayMinutesAsHours(System.Object)">
+	<summary>
+ Converts a number of minutes to a HH:MM display string
+ </summary>
+	<param name="TotalMinutes">A number of minutes</param>
+	<returns>Converted to HH:MM</returns>
+	<remarks>1440 Minutes (i.e. 24 hours) will return 00:00</remarks>
+</member><member name="T:AscensionAnalytics.FileToSqlLoader">
+	<summary>
+ This class helps in the loading of data from a delimited text file to a SQL Server Table
+ </summary>
+	<remarks></remarks>
+</member><member name="M:AscensionAnalytics.ComboListItems.LoadItemsFromRenData(System.String)">
+	<summary>
+ Loads the ComboListItems collection with a dataset from a database.
+ Only the first two fields will be used.  Column 1 is the Code, Column 2 is the Description.
+ If there is only 1 field, both the code and description will be the same value.
+ </summary>
+	<param name="sqlStr">A valid SQL statement to be passed to the database.</param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

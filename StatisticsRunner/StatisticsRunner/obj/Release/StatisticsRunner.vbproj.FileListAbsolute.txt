@@ -1,0 +1,15 @@
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\bin\Release\StatisticsRunner.exe.manifest
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\bin\Release\StatisticsRunner.application
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\bin\Release\StatisticsRunner.exe
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\bin\Release\StatisticsRunner.pdb
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\bin\Release\StatisticsRunner.xml
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Release\ResolveAssemblyReference.cache
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Release\StatisticsRunnerApplication.StatisticsQuickCalc.resources
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Release\StatisticsRunnerApplication.Resources.resources
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Release\StatisticsRunner.vbproj.GenerateResource.Cache
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Release\StatisticsRunner.exe.licenses
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Release\StatisticsRunner.exe.manifest
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Release\StatisticsRunner.application
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Release\StatisticsRunner.exe
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Release\StatisticsRunner.xml
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Release\StatisticsRunner.pdb

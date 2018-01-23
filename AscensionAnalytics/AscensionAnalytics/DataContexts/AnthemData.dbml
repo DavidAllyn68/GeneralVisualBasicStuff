@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="AnthemDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.anthem_claims_summary" Member="anthem_claims_summaries">
+    <Type Name="anthem_claims_summary">
+      <Column Name="rowIdent" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="policyyear" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_cd" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="date_ending" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="rx_benefit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="paid" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.schoolgroups" Member="AnthemSchoolgroups">
+    <Type Name="AnthemSchoolgroup">
+      <Column Name="school_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_cd" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup" Type="System.String" DbType="VarChar(103)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AnthemClaimsSummary_LoadDenormForNightlyCompile" Method="AnthemClaimsSummary_LoadDenormForNightlyCompile">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AnthemClaimsSummary_FinishAndCleanUp" Method="AnthemClaimsSummary_FinishAndCleanUp">
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

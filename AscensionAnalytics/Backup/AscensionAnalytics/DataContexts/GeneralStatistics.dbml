@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="GeneralStatisticsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.GeneralStatistics_Statistics" Member="GeneralStatistics_Statistics">
+    <Type Name="GeneralStatistics_Statistic">
+      <Column Name="GeneralStatisticId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="DevelopmentSQL" Type="System.String" DbType="VarChar(8000) NOT NULL" CanBeNull="false" />
+      <Column Name="GeneralStatisticsCategoryId" Storage="_GeneralStatisticCategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="GeneralStatistics_Statistic_GeneralStatistics_DevelopedStatistic" Member="GeneralStatistics_DevelopedStatistics" ThisKey="GeneralStatisticId" OtherKey="GeneralStatisticId" Type="GeneralStatistics_DevelopedStatistic" />
+      <Association Name="GeneralStatistics_Category_GeneralStatistics_Statistic" Member="GeneralStatistics_Category" ThisKey="GeneralStatisticsCategoryId" OtherKey="GeneralStatisticsCategoryId" Type="GeneralStatistics_Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GeneralStatistics_Categories" Member="GeneralStatistics_Categories">
+    <Type Name="GeneralStatistics_Category">
+      <Column Name="GeneralStatisticsCategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StatisticsCategory" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="GeneralStatistics_Category_GeneralStatistics_Statistic" Member="GeneralStatistics_Statistics" ThisKey="GeneralStatisticsCategoryId" OtherKey="GeneralStatisticsCategoryId" Type="GeneralStatistics_Statistic" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GeneralStatistics_DevelopedStatistics" Member="GeneralStatistics_DevelopedStatistics">
+    <Type Name="GeneralStatistics_DevelopedStatistic">
+      <Column Name="GeneralStatisticsDevelopmentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GeneralStatisticId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Result" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="DevelopmentTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Association Name="GeneralStatistics_Statistic_GeneralStatistics_DevelopedStatistic" Member="GeneralStatistics_Statistic" ThisKey="GeneralStatisticId" OtherKey="GeneralStatisticId" Type="GeneralStatistics_Statistic" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GeneralStatistics_DevelopStatistic" Method="GeneralStatistics_DevelopStatistic">
+    <Parameter Name="GeneralStatisticId" Parameter="generalStatisticId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GeneralStatistics_DevelopStatisticResult">
+      <Column Name="DevelopedStatistic" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GeneralStatistics_DevelopStatisticsForAll" Method="GeneralStatistics_DevelopStatisticsForAll">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GeneralStatistics_DevelopStatisticsForCategoryId" Method="GeneralStatistics_DevelopStatisticsForCategoryId">
+    <Parameter Name="CategoryId" Parameter="categoryId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

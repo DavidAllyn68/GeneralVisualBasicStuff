@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.125" name="DW">
+  <DataContextMoniker Name="/DWDataContext" />
+  <nestedChildShapes>
+    <classShape Id="feaa58c1-6315-4eea-a677-cf1483a291c4" absoluteBounds="1.875, 0.875, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DWDataContext/DW_Policy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="06268492-fa6e-4fc2-8f4f-5ffd8f0c890c" absoluteBounds="1.8899999999999997, 1.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fcabca15-d047-4d6b-9b95-c795c21f849f" absoluteBounds="6.75, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DWDataContext/DW_Datasource" />
+      <nestedChildShapes>
+        <elementListCompartment Id="064ad395-9943-4d78-8d3c-6bdf9d8a7ae8" absoluteBounds="6.765, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bf76c2a1-0bad-43b7-9c3b-70227b8d4170" absoluteBounds="3.5, 4.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DWDataContext/DW_Group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4334e67-b27a-4a55-ae02-5bc686c29463" absoluteBounds="3.5149999999999997, 4.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.7187525 : 4.25); (4.7187525 : 1.49319777669271); (3.875 : 1.49319777669271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DWDataContext/DW_Group/DW_Group_DW_Policy" />
+      <nodes>
+        <classShapeMoniker Id="bf76c2a1-0bad-43b7-9c3b-70227b8d4170" />
+        <classShapeMoniker Id="feaa58c1-6315-4eea-a677-cf1483a291c4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 3.34780110677083); (7.75 : 5.32774983723958); (5.5 : 5.32774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DWDataContext/DW_Datasource/DW_Datasource_DW_Group" />
+      <nodes>
+        <classShapeMoniker Id="fcabca15-d047-4d6b-9b95-c795c21f849f" />
+        <classShapeMoniker Id="bf76c2a1-0bad-43b7-9c3b-70227b8d4170" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4217882e-5fe1-4349-91d2-7a079e5c2103" absoluteBounds="0.875, 4.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DWDataContext/DW_Underwriter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d93d07b9-0930-4044-be6c-12e2ef687578" absoluteBounds="0.89000000000000012, 5.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.375 : 4.625); (2.375 : 3.4151025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DWDataContext/DW_Underwriter/DW_Underwriter_DW_Policy" />
+      <nodes>
+        <classShapeMoniker Id="4217882e-5fe1-4349-91d2-7a079e5c2103" />
+        <classShapeMoniker Id="feaa58c1-6315-4eea-a677-cf1483a291c4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 3.34780110677083); (6.375 : 3.72280110677083); (1.593748 : 3.72280110677083); (1.593748 : 4.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DWDataContext/DW_Datasource/DW_Datasource_DW_Underwriter" />
+      <nodes>
+        <classShapeMoniker Id="fcabca15-d047-4d6b-9b95-c795c21f849f" />
+        <classShapeMoniker Id="4217882e-5fe1-4349-91d2-7a079e5c2103" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c9a81275-ad80-4799-8354-87c179b14cd4" absoluteBounds="5.875, 6.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DWDataContext/DW_Client" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ef7cd4d-dc08-44fb-b38d-6ba1bed4e7fa" absoluteBounds="5.89, 7.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.875 : 6.75); (5.5 : 6.40549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DWDataContext/DW_Client/DW_Client_DW_Group" />
+      <nodes>
+        <classShapeMoniker Id="c9a81275-ad80-4799-8354-87c179b14cd4" />
+        <classShapeMoniker Id="bf76c2a1-0bad-43b7-9c3b-70227b8d4170" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.2187525 : 3.34780110677083); (7.2187525 : 6.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DWDataContext/DW_Datasource/DW_Datasource_DW_Client" />
+      <nodes>
+        <classShapeMoniker Id="fcabca15-d047-4d6b-9b95-c795c21f849f" />
+        <classShapeMoniker Id="c9a81275-ad80-4799-8354-87c179b14cd4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2c809654-5fce-4152-9ff9-f067f27b04c5" absoluteBounds="3.625, 8.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DWDataContext/DW_Population" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ba96068-666c-434b-8d54-834c794f7148" absoluteBounds="3.6399999999999997, 8.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.9374975 : 8.25); (4.9374975 : 6.40549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DWDataContext/DW_Population/DW_Population_DW_Group" />
+      <nodes>
+        <classShapeMoniker Id="2c809654-5fce-4152-9ff9-f067f27b04c5" />
+        <classShapeMoniker Id="bf76c2a1-0bad-43b7-9c3b-70227b8d4170" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.34375 : 3.34780110677083); (8.34375 : 9.10984537760417); (5.625 : 9.10984537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DWDataContext/DW_Datasource/DW_Datasource_DW_Population" />
+      <nodes>
+        <classShapeMoniker Id="fcabca15-d047-4d6b-9b95-c795c21f849f" />
+        <classShapeMoniker Id="2c809654-5fce-4152-9ff9-f067f27b04c5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="512bae0c-783b-450d-95d8-69743f9a4bed" absoluteBounds="1.25, 6.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DWDataContext/DW_Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="225a3553-41d8-41e9-a8bd-d8ee86d24d80" absoluteBounds="1.2650000000000001, 7.3350000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 6.875); (3.5 : 6.40549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DWDataContext/DW_Product/DW_Product_DW_Group" />
+      <nodes>
+        <classShapeMoniker Id="512bae0c-783b-450d-95d8-69743f9a4bed" />
+        <classShapeMoniker Id="bf76c2a1-0bad-43b7-9c3b-70227b8d4170" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.046875 : 3.34780110677083); (8.046875 : 6.5); (5.75 : 6.5); (5.75 : 6.65549967447917); (5.625 : 6.65549967447917); (5.625 : 7.5625); (3.25 : 7.5625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DWDataContext/DW_Datasource/DW_Datasource_DW_Product" />
+      <nodes>
+        <classShapeMoniker Id="fcabca15-d047-4d6b-9b95-c795c21f849f" />
+        <classShapeMoniker Id="512bae0c-783b-450d-95d8-69743f9a4bed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 2.45174694173177); (4.80208583333333 : 2.45174694173177 : JumpStart); (4.63541916666667 : 2.45174694173177 : JumpEnd); (3.875 : 2.45174694173177)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DWDataContext/DW_Datasource/DW_Datasource_DW_Policy" />
+      <nodes>
+        <classShapeMoniker Id="fcabca15-d047-4d6b-9b95-c795c21f849f" />
+        <classShapeMoniker Id="feaa58c1-6315-4eea-a677-cf1483a291c4" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PanelManagerLayoutFile LayoutType="Janus.Windows.UI.Dock.UIPanelManager" LayoutVersion="1.1">
+    <Panel0 ID="2d8641db-4035-46f0-897a-ab8c1043a3da">
+        <Id>2d8641db-4035-46f0-897a-ab8c1043a3da</Id>
+        <DockStyle>Fill</DockStyle>
+        <Text>AnalysisRequest</Text>
+        <Name>pnlAnalysisRequest</Name>
+        <GroupStyle>VerticalTiles</GroupStyle>
+        <IsEntityPanel>True</IsEntityPanel>
+    </Panel0>
+    <Panel1 ID="1beee9d0-d4bb-4b16-b3ac-a4a564b5555d">
+        <Id>1beee9d0-d4bb-4b16-b3ac-a4a564b5555d</Id>
+        <Text>Request Listing</Text>
+        <Name>pnlRequestListing</Name>
+    </Panel1>
+    <Panel2 ID="422a15a7-8b72-43a0-9420-c4e59edc110d">
+        <Id>422a15a7-8b72-43a0-9420-c4e59edc110d</Id>
+        <Text>Request</Text>
+        <Name>pnlRequest</Name>
+        <GroupStyle>HorizontalTiles</GroupStyle>
+        <IsEntityPanel>True</IsEntityPanel>
+    </Panel2>
+    <Panel3 ID="e02a7ade-4544-4b7b-820d-087500697dc3">
+        <Id>e02a7ade-4544-4b7b-820d-087500697dc3</Id>
+        <Text>Details</Text>
+        <Name>pnlDetails</Name>
+    </Panel3>
+    <Panel4 ID="38277416-60bb-4544-806d-c86a0736cfe8">
+        <Id>38277416-60bb-4544-806d-c86a0736cfe8</Id>
+        <Text>Request Logs</Text>
+        <Name>pnlRequestLogs</Name>
+        <GroupStyle>VerticalTiles</GroupStyle>
+        <IsEntityPanel>True</IsEntityPanel>
+    </Panel4>
+    <Panel5 ID="db40c605-2290-4faf-b556-7032d8e56a0f">
+        <Id>db40c605-2290-4faf-b556-7032d8e56a0f</Id>
+        <Text>Listing</Text>
+        <Name>pnlLogListing</Name>
+    </Panel5>
+    <Panel6 ID="d2c99db1-01c8-4d50-a8ee-13e6527b1d40">
+        <Id>d2c99db1-01c8-4d50-a8ee-13e6527b1d40</Id>
+        <Text>Detail</Text>
+        <Name>pnlLogDetail</Name>
+    </Panel6>
+    <DockInfo>
+        <DockedPanels Collection="true" ElementName="Item">
+            <Item0>
+                <Id>2d8641db-4035-46f0-897a-ab8c1043a3da</Id>
+                <IsGroup>True</IsGroup>
+                <GroupStyle>VerticalTiles</GroupStyle>
+                <IsStatic>True</IsStatic>
+                <DockStyle>Fill</DockStyle>
+                <Size>662, 522</Size>
+                <Panels Collection="true" ElementName="Item">
+                    <Item0>
+                        <Id>1beee9d0-d4bb-4b16-b3ac-a4a564b5555d</Id>
+                        <TileSize>138</TileSize>
+                    </Item0>
+                    <Item1>
+                        <Id>422a15a7-8b72-43a0-9420-c4e59edc110d</Id>
+                        <IsGroup>True</IsGroup>
+                        <IsStatic>True</IsStatic>
+                        <TileSize>401</TileSize>
+                        <Panels Collection="true" ElementName="Item">
+                            <Item0>
+                                <Id>e02a7ade-4544-4b7b-820d-087500697dc3</Id>
+                                <TileSize>392</TileSize>
+                            </Item0>
+                            <Item1>
+                                <Id>38277416-60bb-4544-806d-c86a0736cfe8</Id>
+                                <IsGroup>True</IsGroup>
+                                <GroupStyle>VerticalTiles</GroupStyle>
+                                <IsStatic>True</IsStatic>
+                                <TileSize>392</TileSize>
+                                <Panels Collection="true" ElementName="Item">
+                                    <Item0>
+                                        <Id>db40c605-2290-4faf-b556-7032d8e56a0f</Id>
+                                        <TileSize>166</TileSize>
+                                    </Item0>
+                                    <Item1>
+                                        <Id>d2c99db1-01c8-4d50-a8ee-13e6527b1d40</Id>
+                                        <TileSize>231</TileSize>
+                                    </Item1>
+                                </Panels>
+                            </Item1>
+                        </Panels>
+                    </Item1>
+                </Panels>
+            </Item0>
+        </DockedPanels>
+    </DockInfo>
+    <PersistMode>All</PersistMode>
+</PanelManagerLayoutFile>

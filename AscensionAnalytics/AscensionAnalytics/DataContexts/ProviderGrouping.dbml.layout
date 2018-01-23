@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ProviderGrouping">
+  <DataContextMoniker Name="/ProviderGroupingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2e1f4805-1c8e-4498-81dd-6dad7ca6d135" absoluteBounds="4.5, 3, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ProviderGroupingDataContext/ProviderGroupProvider" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51d5d180-ce15-453b-9ad9-41c21cfe82f9" absoluteBounds="4.515, 3.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35de2f68-234d-4c6a-9686-fadf0f24e442" absoluteBounds="1.25, 2.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/ProviderGroupingDataContext/ProviderGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a318cd73-abde-4dfc-9080-a1c21c4ceb91" absoluteBounds="1.2650000000000001, 3.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 3.78929768880208); (4.5 : 3.78929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ProviderGroupingDataContext/ProviderGroup/ProviderGroup_ProviderGroupProvider" />
+      <nodes>
+        <classShapeMoniker Id="35de2f68-234d-4c6a-9686-fadf0f24e442" />
+        <classShapeMoniker Id="2e1f4805-1c8e-4498-81dd-6dad7ca6d135" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4052d12f-07fb-4e19-93a8-7aee515c50e0" absoluteBounds="2.625, 0.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/ProviderGroupingDataContext/ProviderGroupType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c9a405d-c72d-438f-a21c-53d657920161" absoluteBounds="2.64, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.9375 : 2.2612939453125); (2.9375 : 2.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ProviderGroupingDataContext/ProviderGroupType/ProviderGroupType_ProviderGroup" />
+      <nodes>
+        <classShapeMoniker Id="4052d12f-07fb-4e19-93a8-7aee515c50e0" />
+        <classShapeMoniker Id="35de2f68-234d-4c6a-9686-fadf0f24e442" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

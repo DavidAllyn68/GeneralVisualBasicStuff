@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SchoolgroupLogo">
+  <DataContextMoniker Name="/SchoolgroupLogoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4426333b-a257-41f6-b6c2-45325d9cd876" absoluteBounds="1.875, 1.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SchoolgroupLogoDataContext/schoolgroup_logo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af71f1a6-7aa4-467d-b84b-35d8a95b18f3" absoluteBounds="1.8900000000000001, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

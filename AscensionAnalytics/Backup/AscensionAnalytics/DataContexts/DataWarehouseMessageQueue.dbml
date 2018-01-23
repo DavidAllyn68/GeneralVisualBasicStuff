@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="DataWarehouseMessageQueueDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MessageQueue" Member="MessageQueues">
+    <Type Name="MessageQueue">
+      <Column Name="MessageQueueId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MessageSubject" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBody" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="MessageSenderAddress" AutoSync="Never" Type="System.String" DbType="VarChar(100) NOT NULL" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MessageRecipientAddress" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageCreatedDate" AutoSync="Never" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MessageScheduleDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MessageSentDate" AutoSync="Never" Type="System.DateTime" DbType="SmallDateTime" IsDbGenerated="true" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.MessageQueue_ProcessMessages" Method="MessageQueue_ProcessMessages">
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

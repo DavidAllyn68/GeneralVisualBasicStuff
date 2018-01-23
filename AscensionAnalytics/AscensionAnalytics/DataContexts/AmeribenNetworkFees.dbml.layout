@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AmeribenNetworkFees">
+  <DataContextMoniker Name="/AmeribenNetworkFeesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="070d2f37-110b-48a5-8254-39f55d7642b4" absoluteBounds="5.375, 2.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/AmeribenNetworkFeesDataContext/Ameriben_NetworkFee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72d13c85-1681-4e05-b24c-b07203da3f52" absoluteBounds="5.39, 3.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

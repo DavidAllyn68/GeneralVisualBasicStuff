@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="OverlandParkBTSBenefitMappingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.OverlandParkBTS_BenefitMapping" Member="OverlandParkBTS_BenefitMappings">
+    <Type Name="OverlandParkBTS_BenefitMapping">
+      <Column Name="OPBTSBenefitMappingId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OPBTSBenefitCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="AscensionBenefitId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="OverlandParkBTS_BenefitCode_OverlandParkBTS_BenefitMapping" Member="OverlandParkBTS_BenefitCode" ThisKey="OPBTSBenefitCode" OtherKey="BenCode" Type="OverlandParkBTS_BenefitCode" IsForeignKey="true" />
+      <Association Name="OPBTS_BenefitMapping_AscensionBenefit_OverlandParkBTS_BenefitMapping" Member="OPBTS_BenefitMapping_AscensionBenefit" ThisKey="AscensionBenefitId" OtherKey="BenefitId" Type="OPBTS_BenefitMapping_AscensionBenefit" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OverlandParkBTS_BenefitCodes" Member="OverlandParkBTS_BenefitCodes">
+    <Type Name="OverlandParkBTS_BenefitCode">
+      <Column Name="BenefitID" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BenCode" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="BenDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CovCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BenCategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="OverlandParkBTS_BenefitCode_OverlandParkBTS_BenefitMapping" Member="OverlandParkBTS_BenefitMappings" ThisKey="BenCode" OtherKey="OPBTSBenefitCode" Type="OverlandParkBTS_BenefitMapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Benefits" Member="OPBTS_BenefitMapping_AscensionBenefits">
+    <Type Name="OPBTS_BenefitMapping_AscensionBenefit">
+      <Column Name="BenefitId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BenefitCode" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="BenefitDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BenefitCategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsRxBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsMentalHealthBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsInpatientBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsOfficeVisitBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsEmergencyRoomBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="OPBTS_BenefitMapping_AscensionBenefit_OverlandParkBTS_BenefitMapping" Member="OverlandParkBTS_BenefitMappings" ThisKey="BenefitId" OtherKey="AscensionBenefitId" Type="OverlandParkBTS_BenefitMapping" />
+    </Type>
+  </Table>
+</Database>

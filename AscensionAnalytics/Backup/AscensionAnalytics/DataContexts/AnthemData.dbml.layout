@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AnthemData">
+  <DataContextMoniker Name="/AnthemDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d7ea5757-b53b-429d-bdff-471522cdfea8" absoluteBounds="1.25, 1, 2, 1.9631982421875">
+      <DataClassMoniker Name="/AnthemDataDataContext/anthem_claims_summary" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb85c114-e754-4b4f-ba11-9823bf06feff" absoluteBounds="1.2649999999999997, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6fcfacca-ebcd-4221-a5c4-3944fe01d6f2" absoluteBounds="4.75, 1.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AnthemDataDataContext/AnthemSchoolgroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b382bff3-3d6c-4b8d-bf20-79bc705c8c09" absoluteBounds="4.765, 1.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

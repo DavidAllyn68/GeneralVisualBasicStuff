@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PiaBenefitMapping">
+  <DataContextMoniker Name="/PiaBenefitMappingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1d86d311-a664-4ede-a3e6-98d219d2bb4c" absoluteBounds="4, 1.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/PiaBenefitMappingDataContext/PIA_BenefitMapping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e7d1efe-3c7e-421b-869f-63449e5ceef6" absoluteBounds="4.015, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e50ee90c-8d1c-4a9a-a3c4-5d7a1be77c07" absoluteBounds="1.25, 1.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/PiaBenefitMappingDataContext/PIA_Benefits" />
+      <nestedChildShapes>
+        <elementListCompartment Id="628d0075-8a83-4d7d-8fe1-0da1bf8a8f22" absoluteBounds="1.2650000000000001, 2.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7fc2777-3dec-4073-9513-6746d7a3d24e" absoluteBounds="7.125, 1.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/PiaBenefitMappingDataContext/PiaMapping_AscensionBenefits" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e841a186-7b60-4824-b16e-f4c419b07986" absoluteBounds="7.14, 2.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 2.47199625651042); (4 : 2.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PiaBenefitMappingDataContext/PIA_Benefits/PIA_Benefits_PIA_BenefitMapping" />
+      <nodes>
+        <classShapeMoniker Id="e50ee90c-8d1c-4a9a-a3c4-5d7a1be77c07" />
+        <classShapeMoniker Id="1d86d311-a664-4ede-a3e6-98d219d2bb4c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.125 : 2.56814697265625); (6 : 2.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PiaBenefitMappingDataContext/PiaMapping_AscensionBenefits/PiaMapping_AscensionBenefits_PIA_BenefitMapping" />
+      <nodes>
+        <classShapeMoniker Id="d7fc2777-3dec-4073-9513-6746d7a3d24e" />
+        <classShapeMoniker Id="1d86d311-a664-4ede-a3e6-98d219d2bb4c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="MonthlyExperienceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.monthly_experience" Member="monthly_experiences">
+    <Type Name="monthly_experience">
+      <Column Name="MonthlyExperienceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="policyid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_cd" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="underwriter_cd" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="underwriter_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="policyyearid" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="policyyear" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="curr_policyyearid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="curr_policyyear" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="prev_policyyear" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="prev2_policyyear" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="prev3_policyyear" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="yearmo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="year_char" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="month_char" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="month_ending" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="relative_year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="relative_month" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enrollment" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enrollment_months" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prem_due" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="prem_received" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="num_mbrs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="num_claims" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="num_charges" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tot_incurred_ServiceDate" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="tot_incurred" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="tot_ppodisc" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="tot_coinsurance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="tot_copay" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="tot_deductible" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="tot_excluded" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="tot_otherins" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="tot_paid" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_enrollment" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_enrollment_months" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_prem_due" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_prem_received" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_charges" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_incurred_ServiceDate" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_incurred" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_ppodisc" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_coinsurance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_copay" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_deductible" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_excluded" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_otherins" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="cuml_paid" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

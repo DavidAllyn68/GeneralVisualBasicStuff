@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataSourceBenefitMapping">
+  <DataContextMoniker Name="/AmeribenBenefitMappingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0c5f8374-4f44-4f11-bb97-510200827a29" absoluteBounds="8.25, 1.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/AmeribenBenefitMappingDataContext/AmeribenMapping_AscensionBenefits" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bcd59339-adab-4564-8507-ee42b7008f7b" absoluteBounds="8.265, 1.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="016cc325-048b-483d-9121-424288c04be4" absoluteBounds="4.625, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AmeribenBenefitMappingDataContext/Ameriben_BenefitMapping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="064a39ab-73a6-49f4-a23e-d67589d66b21" absoluteBounds="4.64, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea06d360-91c7-43bc-9b7a-fd75acf20527" absoluteBounds="3.875, 3.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/AmeribenBenefitMappingDataContext/Ameriben_POS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82f59a8b-a358-4960-94a0-409b6e6dbfdf" absoluteBounds="3.8900000000000006, 3.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f45990e9-9895-48a8-baf8-0cc2f95e6d0c" absoluteBounds="2, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AmeribenBenefitMappingDataContext/Ameriben_TOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb66951e-1a2a-469e-8ba5-05f4bab43c8d" absoluteBounds="2.0150000000000006, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 3.5); (5.25 : 2.45359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AmeribenBenefitMappingDataContext/Ameriben_POS/Ameriben_POS_Ameriben_BenefitMapping" />
+      <nodes>
+        <classShapeMoniker Id="ea06d360-91c7-43bc-9b7a-fd75acf20527" />
+        <classShapeMoniker Id="016cc325-048b-483d-9121-424288c04be4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4 : 1.66429768880208); (4.625 : 1.66429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AmeribenBenefitMappingDataContext/Ameriben_TOS/Ameriben_TOS_Ameriben_BenefitMapping" />
+      <nodes>
+        <classShapeMoniker Id="f45990e9-9895-48a8-baf8-0cc2f95e6d0c" />
+        <classShapeMoniker Id="016cc325-048b-483d-9121-424288c04be4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 1.85179768880208); (6.625 : 1.85179768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AmeribenBenefitMappingDataContext/AmeribenMapping_AscensionBenefits/AmeribenMapping_AscensionBenefits_Ameriben_BenefitMapping" />
+      <nodes>
+        <classShapeMoniker Id="0c5f8374-4f44-4f11-bb97-510200827a29" />
+        <classShapeMoniker Id="016cc325-048b-483d-9121-424288c04be4" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

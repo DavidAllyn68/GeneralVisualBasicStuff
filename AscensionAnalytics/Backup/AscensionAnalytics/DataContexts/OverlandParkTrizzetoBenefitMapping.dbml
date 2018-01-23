@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="OverlandParkTrizzetoBenefitMappingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Benefits" Member="OverlandParkTrizzetoMapping_AscensionBenefits">
+    <Type Name="OverlandParkTrizzetoMapping_AscensionBenefit">
+      <Column Name="BenefitId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BenefitCode" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="BenefitDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsRxBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsMentalHealthBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsInpatientBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsOfficeVisitBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsEmergencyRoomBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="OverlandParkTrizzetoMapping_AscensionBenefit_OverlandParkTrizzeto_BenefitMapping" Member="OverlandParkTrizzeto_BenefitMappings" ThisKey="BenefitId" OtherKey="AscensionBenefitId" Type="OverlandParkTrizzeto_BenefitMapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OverlandParkTrizzeto_BenefitMapping" Member="OverlandParkTrizzeto_BenefitMappings">
+    <Type Name="OverlandParkTrizzeto_BenefitMapping">
+      <Column Name="OverlandParkTrizzetoBenefitMappingId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OverlandParkTrizzetoBenefitCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="OverlandParkTrizzetoBenefitDescription" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="OverlandParkTrizzetoPlaceOfService" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AscensionBenefitId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="OverlandParkTrizzetoMapping_AscensionBenefit_OverlandParkTrizzeto_BenefitMapping" Member="OverlandParkTrizzetoMapping_AscensionBenefit" ThisKey="AscensionBenefitId" OtherKey="BenefitId" Type="OverlandParkTrizzetoMapping_AscensionBenefit" IsForeignKey="true" />
+      <Association Name="OverlandParkTrizzetoPlaceOfService_OverlandParkTrizzeto_BenefitMapping" Member="OverlandParkTrizzeto_PlaceOfService" ThisKey="OverlandParkTrizzetoPlaceOfService" OtherKey="PlaceOfServiceCode" Type="OverlandParkTrizzeto_PlaceOfService" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PlaceOfService" Member="OverlandParkTrizzeto_PlaceOfServices">
+    <Type Name="OverlandParkTrizzeto_PlaceOfService">
+      <Column Name="PlaceOfServiceCode" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PlaceOfServiceName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceOfServiceDescription" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceOfServiceCategoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="OverlandParkTrizzetoPlaceOfService_OverlandParkTrizzeto_BenefitMapping" Member="OverlandParkTrizzeto_BenefitMappings" ThisKey="PlaceOfServiceCode" OtherKey="OverlandParkTrizzetoPlaceOfService" Type="OverlandParkTrizzeto_BenefitMapping" />
+    </Type>
+  </Table>
+</Database>

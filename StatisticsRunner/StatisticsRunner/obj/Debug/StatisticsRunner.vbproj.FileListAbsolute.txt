@@ -1,0 +1,11 @@
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\bin\Debug\StatisticsRunner.exe
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\bin\Debug\StatisticsRunner.pdb
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\bin\Debug\StatisticsRunner.xml
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Debug\WindowsApplication1.Form1.resources
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Debug\StatisticsRunner.vbproj.GenerateResource.Cache
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Debug\StatisticsRunner.exe.licenses
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Debug\StatisticsRunner.exe
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Debug\StatisticsRunner.xml
+C:\Users\david.REN\Documents\Visual Studio 2008\Projects\StatisticsRunner\StatisticsRunner\obj\Debug\StatisticsRunner.pdb

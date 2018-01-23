@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="ProviderGroupingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ProviderGroupProviders" Member="ProviderGroupProviders">
+    <Type Name="ProviderGroupProvider">
+      <Column Name="ProviderGroupingProviderId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProviderGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderNumberBegin" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderNumberEnd" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProviderGroup_ProviderGroupProvider" Member="ProviderGroup" ThisKey="ProviderGroupId" OtherKey="ProviderGroupId" Type="ProviderGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProviderGroups" Member="ProviderGroups">
+    <Type Name="ProviderGroup">
+      <Column Name="ProviderGroupId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProviderGroupCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderGroupName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderGroupDescription" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderGroupSchoolgroupCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderGroupTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ProviderGroup_ProviderGroupProvider" Member="ProviderGroupProviders" ThisKey="ProviderGroupId" OtherKey="ProviderGroupId" Type="ProviderGroupProvider" />
+      <Association Name="ProviderGroupType_ProviderGroup" Member="ProviderGroupType" ThisKey="ProviderGroupTypeId" OtherKey="ProviderGroupTypeId" Type="ProviderGroupType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProviderGroupTypes" Member="ProviderGroupTypes">
+    <Type Name="ProviderGroupType">
+      <Column Name="ProviderGroupTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProviderGroupType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderGroupTypeDescription" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="ProviderGroupType_ProviderGroup" Member="ProviderGroups" ThisKey="ProviderGroupTypeId" OtherKey="ProviderGroupTypeId" Type="ProviderGroup" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ProviderGroup_LoadSHSProviderListingFromClaims" Method="ProviderGroup_LoadSHSProviderListingFromClaims">
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

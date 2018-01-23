@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="David" Class="ThingsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=EASQLDEV3;Initial Catalog=David;Integrated Security=True" SettingsObjectName="ThingManager.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Things" Member="Things">
+    <Type Name="Thing">
+      <Column Name="ThingId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Memo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Thing_ThingAssociation" Member="ThingAssociations" ThisKey="ThingId" OtherKey="ParentThingId" Type="ThingAssociation" />
+      <Association Name="Thing_ThingAssociation1" Member="ThingAssociations1" ThisKey="ThingId" OtherKey="ChildThingId" Type="ThingAssociation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThingAssociations" Member="ThingAssociations">
+    <Type Name="ThingAssociation">
+      <Column Name="ThingAssociationId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentThingId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ChildThingId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Thing_ThingAssociation" Member="Thing" ThisKey="ParentThingId" OtherKey="ThingId" Type="Thing" IsForeignKey="true" />
+      <Association Name="Thing_ThingAssociation1" Member="Thing1" ThisKey="ChildThingId" OtherKey="ThingId" Type="Thing" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

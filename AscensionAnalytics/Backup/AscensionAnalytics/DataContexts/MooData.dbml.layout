@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MooData">
+  <DataContextMoniker Name="/MooDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e0eadae4-e676-48e0-b379-5374771a2f09" absoluteBounds="4.5, 1.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/MooDataDataContext/MOO_BenefitMapping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d295d33-4dbb-4cfa-83d1-07ed692a8260" absoluteBounds="4.515, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f3d492f2-e646-4205-b811-9b37e86addac" absoluteBounds="1.75, 1.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/MooDataDataContext/MOO_Benefit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10d081e8-2373-4beb-b65e-cefd203971cb" absoluteBounds="1.7650000000000001, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a7276ab1-513d-425c-8ccd-ef938f892b02" absoluteBounds="7.25, 1.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/MooDataDataContext/MooMapping_AscensionBenefits" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05ec649c-01d3-4df4-9d86-46510d399bbe" absoluteBounds="7.2650000000000006, 1.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 1.97199625651042); (4.5 : 1.97199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MooDataDataContext/MOO_Benefit/MOO_Benefit_MOO_BenefitMapping" />
+      <nodes>
+        <classShapeMoniker Id="f3d492f2-e646-4205-b811-9b37e86addac" />
+        <classShapeMoniker Id="e0eadae4-e676-48e0-b379-5374771a2f09" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 2.06814697265625); (6.5 : 2.06814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MooDataDataContext/MooMapping_AscensionBenefits/MooMapping_AscensionBenefits_MOO_BenefitMapping" />
+      <nodes>
+        <classShapeMoniker Id="a7276ab1-513d-425c-8ccd-ef938f892b02" />
+        <classShapeMoniker Id="e0eadae4-e676-48e0-b379-5374771a2f09" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

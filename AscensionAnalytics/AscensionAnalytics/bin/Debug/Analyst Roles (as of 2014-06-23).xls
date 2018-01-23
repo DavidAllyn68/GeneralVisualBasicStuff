@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?mso-application progid='Excel.Sheet'?>
+<Workbook xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns="urn:schemas-microsoft-com:office:spreadsheet">
+ <o:OfficeDocumentSettings>
+  <Colors>
+   <Color>
+    <Index>1</Index>
+    <RGB>#000000</RGB>
+   </Color>
+   <Color>
+    <Index>2</Index>
+    <RGB>#154a93</RGB>
+   </Color>
+   <Color>
+    <Index>3</Index>
+    <RGB>#ffffff</RGB>
+   </Color>
+  </Colors>
+ </o:OfficeDocumentSettings>
+ <Styles>
+  <Style ss:ID="s1">
+   <ss:Font ss:FontName="Calibri" ss:Size="8.25" ss:Color="#154a93" />
+  </Style>
+  <Style ss:ID="s2">
+   <ss:Font ss:FontName="Calibri" ss:Size="8.25" ss:Color="#000000" />
+  </Style>
+ </Styles>
+ <ss:Worksheet ss:Name="Sheet1">
+  <Table>
+   <Column ss:AutoFit="0" ss:Width="22.5" />
+   <Column ss:AutoFit="0" ss:Width="129" />
+   <Row>
+    <Cell ss:StyleID="s1"><Data ss:Type="String">Id</Data></Cell>
+    <Cell ss:StyleID="s1"><Data ss:Type="String">Analyst Role</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s2"><Data ss:Type="String">Not Active</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s2"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s2"><Data ss:Type="String">Managing Analyst</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s2"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s2"><Data ss:Type="String">Consultant Analyst</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s2"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s2"><Data ss:Type="String">Data Analyst</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s2"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s2"><Data ss:Type="String">Intern</Data></Cell>
+   </Row>
+  </Table>
+ </ss:Worksheet>
+</Workbook>

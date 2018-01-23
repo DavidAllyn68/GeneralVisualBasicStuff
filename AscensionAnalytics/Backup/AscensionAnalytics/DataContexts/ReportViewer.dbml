@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="ReportViewerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ReportViewer_AvailableBenefitCodes" Member="ReportViewer_AvailableBenefitCodes">
+    <Type Name="ReportViewer_AvailableBenefitCode">
+      <Column Name="BenefitCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="BenefitDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportViewer_AvailableGroupingItems" Member="ReportViewer_AvailableGroupingItems">
+    <Type Name="ReportViewer_AvailableGroupingItem">
+      <Column Name="GroupingItemId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupingValue" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="GroupingDisplay" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportViewer_AvailableSchoolgroups" Member="ReportViewer_AvailableSchoolgroups">
+    <Type Name="ReportViewer_AvailableSchoolgroup">
+      <Column Name="SchoolgroupCode" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="SchoolgroupDescription" Type="System.String" DbType="VarChar(63)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportViewer_RecordFilters" Member="ReportViewer_RecordFilters">
+    <Type Name="ReportViewer_RecordFilter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TableName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DisplayField" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ValueField" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DataType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FilterType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LookupExpression" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportViewer_Users" Member="ReportViewer_Users">
+    <Type Name="ReportViewer_User">
+      <Column Name="ReportViewerUserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="WindowsLogin" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportViewer_AvailableReportParameterValues" Member="ReportViewer_AvailableReportParameterValues">
+    <Type Name="ReportViewer_AvailableReportParameterValue">
+      <Column Name="ReportViewerParameterValuesId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParameterName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ParameterDescription" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ParameterValuesSqlStatement" Type="System.String" DbType="VarChar(4000) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

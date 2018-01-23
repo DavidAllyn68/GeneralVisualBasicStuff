@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="AetnaDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Aetna_BenefitMapping" Member="Aetna_BenefitMappings">
+    <Type Name="Aetna_BenefitMapping">
+      <Column Name="AetnaBenefitMapId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AetnaBenefitType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="AetnaPlaceOfService" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="AscensionBenefitId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Aetna_BenefitType_Aetna_BenefitMapping" Member="Aetna_BenefitType" ThisKey="AetnaBenefitType" OtherKey="BenefitType" Type="Aetna_BenefitType" IsForeignKey="true" />
+      <Association Name="Aetna_PlaceOfServiceCode_Aetna_BenefitMapping" Member="Aetna_PlaceOfServiceCode" ThisKey="AetnaPlaceOfService" OtherKey="PlaceOfServiceCode" Type="Aetna_PlaceOfServiceCode" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Aetna_BenefitTypes" Member="Aetna_BenefitTypes">
+    <Type Name="Aetna_BenefitType">
+      <Column Name="BenefitType" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BenefitTypeDescription" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Association Name="Aetna_BenefitType_Aetna_BenefitMapping" Member="Aetna_BenefitMappings" ThisKey="BenefitType" OtherKey="AetnaBenefitType" Type="Aetna_BenefitMapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Aetna_PlaceOfServiceCodes" Member="Aetna_PlaceOfServiceCodes">
+    <Type Name="Aetna_PlaceOfServiceCode">
+      <Column Name="PlaceOfServiceCode" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PlaceOfServiceDescription" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Aetna_PlaceOfServiceCode_Aetna_BenefitMapping" Member="Aetna_BenefitMappings" ThisKey="PlaceOfServiceCode" OtherKey="AetnaPlaceOfService" Type="Aetna_BenefitMapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Benefits" Member="Aetna_AscensionBenefits">
+    <Type Name="Aetna_AscensionBenefit">
+      <Column Name="BenefitId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BenefitCode" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="BenefitDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BenefitCategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsRxBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsMentalHealthBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsInpatientBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsOfficeVisitBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsEmergencyRoomBenefit" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Aetna_GroupMapping" Member="Aetna_GroupMappings">
+    <Type Name="Aetna_GroupMapping">
+      <Column Name="AetnaGroupMapId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AetnaGroupId" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="AetnaGroupName" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="AetnaLocationCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="AetnaPlanId" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="AscensionSchoolgroupCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

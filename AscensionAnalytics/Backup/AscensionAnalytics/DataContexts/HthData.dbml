@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="HthDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.HTH_GROUPS" Member="HTH_GROUPs">
+    <Type Name="HTH_GROUP">
+      <Column Name="GROUP_CODE" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GROUP_DESCRIPTION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SUB_GROUP_DESCRIPTION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="HTH_GROUP_HTH_GROUPS_MAP" Member="HTH_GROUPS_MAP" ThisKey="GROUP_CODE" OtherKey="hth_group_cd" Type="HTH_GROUPS_MAP" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.schoolgroups" Member="HthDataSchoolgroups">
+    <Type Name="HthDataSchoolgroups">
+      <Column Name="school_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_cd" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup" Type="System.String" DbType="VarChar(103)" CanBeNull="true" />
+      <Association Name="HthDataSchoolgroups_HTH_GROUPS_MAP" Member="HTH_GROUPS_MAPs" ThisKey="schoolgroup_cd" OtherKey="ren_group_cd" Type="HTH_GROUPS_MAP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HTH_GROUPS_MAP" Member="HTH_GROUPS_MAPs">
+    <Type Name="HTH_GROUPS_MAP">
+      <Column Name="hth_group_cd" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="hth_group_ds" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hth_sub_group_ds" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ren_group_cd" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="HTH_GROUP_HTH_GROUPS_MAP" Member="HTH_GROUP" ThisKey="hth_group_cd" OtherKey="GROUP_CODE" Type="HTH_GROUP" IsForeignKey="true" />
+      <Association Name="HthDataSchoolgroups_HTH_GROUPS_MAP" Member="HthDataSchoolgroups" ThisKey="ren_group_cd" OtherKey="schoolgroup_cd" Type="HthDataSchoolgroups" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.hthFileImport_FinishAndCleanUp" Method="hthFileImport_FinishAndCleanUp">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.hthFileImport_LoadDenormForNightlyCompile" Method="hthFileImport_LoadDenormForNightlyCompile">
+    <ElementType Name="hthFileImport_LoadDenormForNightlyCompileResult">
+      <Column Name="MessageQueueId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MessageSubject" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBody" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="MessageSenderAddress" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageRecipientAddress" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageCreatedDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MessageScheduleDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MessageSentDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.hthFileImport_ProcessDataTranslators" Method="hthFileImport_ProcessDataTranslators">
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

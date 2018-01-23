@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandManagerLayoutFile LayoutType="Janus.Windows.UI.CommandBars.UICommandManager" LayoutVersion="1.1">
+    <BottomRebar ID="Bottom" />
+    <CommandBars Collection="true" ElementName="CommandBar">
+        <cmdbarMain ID="cmdbarMain">
+            <CommandBarType>Menu</CommandBarType>
+            <Commands Collection="true" ElementName="Command">
+                <Command0 ID="cmdAPPLICATION">
+                    <BaseCommand>cmdAPPLICATION</BaseCommand>
+                    <Key>cmdAPPLICATION</Key>
+                    <Name>cmdAPPLICATION1</Name>
+                </Command0>
+                <Command1 ID="cmdLOOKUPTABLES">
+                    <BaseCommand>cmdLOOKUPTABLES</BaseCommand>
+                    <Key>cmdLOOKUPTABLES</Key>
+                    <Name>cmdLOOKUPTABLES1</Name>
+                </Command1>
+                <Command2 ID="cmdTOOLS">
+                    <BaseCommand>cmdTOOLS</BaseCommand>
+                    <Key>cmdTOOLS</Key>
+                    <Name>cmdTOOLS1</Name>
+                </Command2>
+                <OriginalCommands Collection="true" ElementName="Command">
+                    <Command0 ID="cmdAPPLICATION">
+                        <BaseCommand>cmdAPPLICATION</BaseCommand>
+                    </Command0>
+                    <Command1 ID="cmdLOOKUPTABLES">
+                        <BaseCommand>cmdLOOKUPTABLES</BaseCommand>
+                    </Command1>
+                    <Command2 ID="cmdTOOLS">
+                        <BaseCommand>cmdTOOLS</BaseCommand>
+                    </Command2>
+                </OriginalCommands>
+            </Commands>
+            <Key>cmdbarMain</Key>
+            <RowIndex>0</RowIndex>
+        </cmdbarMain>
+    </CommandBars>
+    <Commands Collection="true" ElementName="Command">
+        <cmdAPPLICATION ID="cmdAPPLICATION">
+            <Commands Collection="true" ElementName="Command">
+                <Command0 ID="cmdSAVE">
+                    <BaseCommand>cmdSAVE</BaseCommand>
+                    <Key>cmdSAVE</Key>
+                    <Name>cmdSAVE1</Name>
+                </Command0>
+                <Command1 ID="cmdPRINT">
+                    <BaseCommand>cmdPRINT</BaseCommand>
+                    <Key>cmdPRINT</Key>
+                    <Name>cmdPRINT1</Name>
+                </Command1>
+                <Command2 ID="Separator">
+                    <BaseCommand>Separator</BaseCommand>
+                    <CommandType>Separator</CommandType>
+                    <Key>Separator</Key>
+                    <Name>Separator1</Name>
+                </Command2>
+                <Command3 ID="cmdEXIT">
+                    <BaseCommand>cmdEXIT</BaseCommand>
+                    <Key>cmdEXIT</Key>
+                    <Name>cmdEXIT1</Name>
+                </Command3>
+                <OriginalCommands Collection="true" ElementName="Command">
+                    <Command0 ID="cmdSAVE">
+                        <BaseCommand>cmdSAVE</BaseCommand>
+                    </Command0>
+                    <Command1 ID="cmdPRINT">
+                        <BaseCommand>cmdPRINT</BaseCommand>
+                    </Command1>
+                    <Command2>
+                        <BaseCommand>Separator</BaseCommand>
+                        <CommandType>Separator</CommandType>
+                    </Command2>
+                    <Command3 ID="cmdEXIT">
+                        <BaseCommand>cmdEXIT</BaseCommand>
+                    </Command3>
+                </OriginalCommands>
+            </Commands>
+            <Key>cmdAPPLICATION</Key>
+            <Name>cmdAPPLICATION</Name>
+            <Text>Application</Text>
+        </cmdAPPLICATION>
+        <cmdSAVE ID="cmdSAVE">
+            <Key>cmdSAVE</Key>
+            <Name>cmdSAVE</Name>
+            <Shortcut>CtrlS</Shortcut>
+            <Text>Save</Text>
+        </cmdSAVE>
+        <cmdPRINT ID="cmdPRINT">
+            <Key>cmdPRINT</Key>
+            <Name>cmdPRINT</Name>
+            <Shortcut>CtrlP</Shortcut>
+            <Text>Print</Text>
+        </cmdPRINT>
+        <cmdEXIT ID="cmdEXIT">
+            <Key>cmdEXIT</Key>
+            <Name>cmdEXIT</Name>
+            <Shortcut>AltF4</Shortcut>
+            <Text>Exit</Text>
+        </cmdEXIT>
+        <cmdLOOKUPTABLES ID="cmdLOOKUPTABLES">
+            <Commands Collection="true" ElementName="Command">
+                <Command0 ID="cmdSCHOOLGROUP_GROUPS">
+                    <BaseCommand>cmdSCHOOLGROUP_GROUPS</BaseCommand>
+                    <Key>cmdSCHOOLGROUP_GROUPS</Key>
+                    <Name>cmdSCHOOLGROUP_GROUPS1</Name>
+                </Command0>
+                <Command1 ID="cmdANALYSISPEOPLE">
+                    <BaseCommand>cmdANALYSISPEOPLE</BaseCommand>
+                    <Key>cmdANALYSISPEOPLE</Key>
+                    <Name>cmdANALYSISPEOPLE1</Name>
+                </Command1>
+                <Command2 ID="Separator">
+                    <BaseCommand>Separator</BaseCommand>
+                    <CommandType>Separator</CommandType>
+                    <Key>Separator</Key>
+                    <Name>Separator2</Name>
+                </Command2>
+                <Command3 ID="cmdANALYSISREQUESTSTATUS">
+                    <BaseCommand>cmdANALYSISREQUESTSTATUS</BaseCommand>
+                    <Key>cmdANALYSISREQUESTSTATUS</Key>
+                    <Name>cmdANALYSISREQUESTSTATUS1</Name>
+                </Command3>
+                <Command4 ID="cmdANALYSISREQUESTTYPE">
+                    <BaseCommand>cmdANALYSISREQUESTTYPE</BaseCommand>
+                    <Key>cmdANALYSISREQUESTTYPE</Key>
+                    <Name>cmdANALYSISREQUESTTYPE1</Name>
+                </Command4>
+                <Command5 ID="Separator">
+                    <BaseCommand>Separator</BaseCommand>
+                    <CommandType>Separator</CommandType>
+                    <Key>Separator</Key>
+                    <Name>Separator3</Name>
+                </Command5>
+                <Command6 ID="cmdALTERNATEDESCRIPTORS">
+                    <BaseCommand>cmdALTERNATEDESCRIPTORS</BaseCommand>
+                    <Key>cmdALTERNATEDESCRIPTORS</Key>
+                    <Name>cmdALTERNATEDESCRIPTORS1</Name>
+                </Command6>
+                <Command7 ID="Separator">
+                    <BaseCommand>Separator</BaseCommand>
+                    <CommandType>Separator</CommandType>
+                    <Key>Separator</Key>
+                    <Name>Separator4</Name>
+                </Command7>
+                <Command8 ID="cmdSCHOOLGROUPASSIGNMENTS">
+                    <BaseCommand>cmdSCHOOLGROUPASSIGNMENTS</BaseCommand>
+                    <Name>cmdSCHOOLGROUPASSIGNMENTS2</Name>
+                </Command8>
+                <Command9 ID="cmdSCHOOLGROUPASSIGNMENTTYPES">
+                    <BaseCommand>cmdSCHOOLGROUPASSIGNMENTTYPES</BaseCommand>
+                    <Key>cmdSCHOOLGROUPASSIGNMENTTYPES</Key>
+                    <Name>cmdSCHOOLGROUPASSIGNMENTTYPES1</Name>
+                </Command9>
+                <OriginalCommands Collection="true" ElementName="Command">
+                    <Command0 ID="cmdSCHOOLGROUP_GROUPS">
+                        <BaseCommand>cmdSCHOOLGROUP_GROUPS</BaseCommand>
+                    </Command0>
+                    <Command1 ID="cmdANALYSISPEOPLE">
+                        <BaseCommand>cmdANALYSISPEOPLE</BaseCommand>
+                    </Command1>
+                    <Command2>
+                        <BaseCommand>Separator</BaseCommand>
+                        <CommandType>Separator</CommandType>
+                    </Command2>
+                    <Command3 ID="cmdANALYSISREQUESTSTATUS">
+                        <BaseCommand>cmdANALYSISREQUESTSTATUS</BaseCommand>
+                    </Command3>
+                    <Command4 ID="cmdANALYSISREQUESTTYPE">
+                        <BaseCommand>cmdANALYSISREQUESTTYPE</BaseCommand>
+                    </Command4>
+                    <Command5>
+                        <BaseCommand>Separator</BaseCommand>
+                        <CommandType>Separator</CommandType>
+                    </Command5>
+                    <Command6 ID="cmdALTERNATEDESCRIPTORS">
+                        <BaseCommand>cmdALTERNATEDESCRIPTORS</BaseCommand>
+                    </Command6>
+                    <Command7>
+                        <BaseCommand>Separator</BaseCommand>
+                        <CommandType>Separator</CommandType>
+                    </Command7>
+                    <Command8 ID="cmdSCHOOLGROUPASSIGNMENTTYPES">
+                        <BaseCommand>cmdSCHOOLGROUPASSIGNMENTTYPES</BaseCommand>
+                    </Command8>
+                </OriginalCommands>
+            </Commands>
+            <Key>cmdLOOKUPTABLES</Key>
+            <Name>cmdLOOKUPTABLES</Name>
+            <Text>Lookup Tables</Text>
+        </cmdLOOKUPTABLES>
+        <cmdSCHOOLGROUP_GROUPS ID="cmdSCHOOLGROUP_GROUPS">
+            <Key>cmdSCHOOLGROUP_GROUPS</Key>
+            <Name>cmdSCHOOLGROUP_GROUPS</Name>
+            <Shortcut>CtrlShiftS</Shortcut>
+            <Text>Schoolgroup Groups</Text>
+        </cmdSCHOOLGROUP_GROUPS>
+        <cmdTOOLS ID="cmdTOOLS">
+            <Commands Collection="true" ElementName="Command">
+                <Command0 ID="cmdANALYSISTRACKER">
+                    <BaseCommand>cmdANALYSISTRACKER</BaseCommand>
+                    <Key>cmdANALYSISTRACKER</Key>
+                    <Name>cmdANALYSISTRACKER1</Name>
+                </Command0>
+                <Command1 ID="cmdDISTRIBUTIONS">
+                    <BaseCommand>cmdDISTRIBUTIONS</BaseCommand>
+                    <Key>cmdDISTRIBUTIONS</Key>
+                    <Name>cmdDISTRIBUTIONS1</Name>
+                </Command1>
+                <Command2 ID="cmdDatasourceMaxPaidDate">
+                    <BaseCommand>cmdDatasourceMaxPaidDate</BaseCommand>
+                    <Key>cmdDatasourceMaxPaidDate</Key>
+                    <Name>cmdDatasourceMaxPaidDate1</Name>
+                </Command2>
+                <OriginalCommands Collection="true" ElementName="Command">
+                    <Command0 ID="cmdANALYSISTRACKER">
+                        <BaseCommand>cmdANALYSISTRACKER</BaseCommand>
+                    </Command0>
+                    <Command1 ID="cmdDISTRIBUTIONS">
+                        <BaseCommand>cmdDISTRIBUTIONS</BaseCommand>
+                    </Command1>
+                    <Command2 ID="cmdDatasourceMaxPaidDate">
+                        <BaseCommand>cmdDatasourceMaxPaidDate</BaseCommand>
+                    </Command2>
+                    <Command3 ID="cmdSCHOOLGROUPASSIGNMENTS">
+                        <BaseCommand>cmdSCHOOLGROUPASSIGNMENTS</BaseCommand>
+                    </Command3>
+                </OriginalCommands>
+            </Commands>
+            <Key>cmdTOOLS</Key>
+            <Name>cmdTOOLS</Name>
+            <Text>Tools</Text>
+        </cmdTOOLS>
+        <cmdANALYSISTRACKER ID="cmdANALYSISTRACKER">
+            <Key>cmdANALYSISTRACKER</Key>
+            <Name>cmdANALYSISTRACKER</Name>
+            <Shortcut>CtrlShiftT</Shortcut>
+            <Text>Analysis Tracker</Text>
+        </cmdANALYSISTRACKER>
+        <cmdANALYSISPEOPLE ID="cmdANALYSISPEOPLE">
+            <Key>cmdANALYSISPEOPLE</Key>
+            <Name>cmdANALYSISPEOPLE</Name>
+            <Shortcut>CtrlShiftP</Shortcut>
+            <Text>Analysis People</Text>
+        </cmdANALYSISPEOPLE>
+        <cmdANALYSISREQUESTSTATUS ID="cmdANALYSISREQUESTSTATUS">
+            <Key>cmdANALYSISREQUESTSTATUS</Key>
+            <Name>cmdANALYSISREQUESTSTATUS</Name>
+            <Text>Analysis Request Status</Text>
+        </cmdANALYSISREQUESTSTATUS>
+        <cmdANALYSISREQUESTTYPE ID="cmdANALYSISREQUESTTYPE">
+            <Key>cmdANALYSISREQUESTTYPE</Key>
+            <Name>cmdANALYSISREQUESTTYPE</Name>
+            <Text>Analysis Request Types</Text>
+        </cmdANALYSISREQUESTTYPE>
+        <cmdALTERNATEDESCRIPTORS ID="cmdALTERNATEDESCRIPTORS">
+            <Key>cmdALTERNATEDESCRIPTORS</Key>
+            <Name>cmdALTERNATEDESCRIPTORS</Name>
+            <Text>Alternate Descriptors</Text>
+        </cmdALTERNATEDESCRIPTORS>
+        <cmdDISTRIBUTIONS ID="cmdDISTRIBUTIONS">
+            <Key>cmdDISTRIBUTIONS</Key>
+            <Name>cmdDISTRIBUTIONS</Name>
+            <Text>Custom Distributions</Text>
+        </cmdDISTRIBUTIONS>
+        <cmdDatasourceMaxPaidDate ID="cmdDatasourceMaxPaidDate">
+            <Key>cmdDatasourceMaxPaidDate</Key>
+            <Name>cmdDatasourceMaxPaidDate</Name>
+            <Text>Data Source Max Paid Date</Text>
+        </cmdDatasourceMaxPaidDate>
+        <cmdSCHOOLGROUPASSIGNMENTS ID="cmdSCHOOLGROUPASSIGNMENTS">
+            <Key>cmdSCHOOLGROUPASSIGNMENTS</Key>
+            <Name>cmdSCHOOLGROUPASSIGNMENTS</Name>
+            <Text>Schoolgroup Assignments</Text>
+        </cmdSCHOOLGROUPASSIGNMENTS>
+        <cmdSCHOOLGROUPASSIGNMENTTYPES ID="cmdSCHOOLGROUPASSIGNMENTTYPES">
+            <Key>cmdSCHOOLGROUPASSIGNMENTTYPES</Key>
+            <Name>cmdSCHOOLGROUPASSIGNMENTTYPES</Name>
+            <Text>Schoolgroup Assignment Types</Text>
+        </cmdSCHOOLGROUPASSIGNMENTTYPES>
+    </Commands>
+    <LeftRebar ID="Left" />
+    <RightRebar ID="Right" />
+    <TopRebar ID="Top">
+        <CommandBars Collection="true">
+            <cmdbarMain>
+                <RowIndex>0</RowIndex>
+            </cmdbarMain>
+        </CommandBars>
+    </TopRebar>
+    <Layouts Collection="true" ElementName="Layout">
+        <Layout0 ID="MainMenu">
+            <Key>MainMenu</Key>
+            <LayoutString><UICommandManager><BottomRebar ID="Bottom" /><CommandBars Collection="true" ElementName="CommandBar"><cmdbarMain ID="cmdbarMain"><CommandBarType>Menu</CommandBarType><Commands Collection="true" ElementName="Command"><Command0 ID="cmdAPPLICATION"><BaseCommand>cmdAPPLICATION</BaseCommand><Key>cmdAPPLICATION</Key><Name>cmdAPPLICATION1</Name></Command0><Command1 ID="cmdLOOKUPTABLES"><BaseCommand>cmdLOOKUPTABLES</BaseCommand><Key>cmdLOOKUPTABLES</Key><Name>cmdLOOKUPTABLES1</Name></Command1><Command2 ID="cmdTOOLS"><BaseCommand>cmdTOOLS</BaseCommand><Key>cmdTOOLS</Key><Name>cmdTOOLS1</Name></Command2><OriginalCommands Collection="true" ElementName="Command"><Command0 ID="cmdAPPLICATION"><BaseCommand>cmdAPPLICATION</BaseCommand></Command0><Command1 ID="cmdLOOKUPTABLES"><BaseCommand>cmdLOOKUPTABLES</BaseCommand></Command1><Command2 ID="cmdTOOLS"><BaseCommand>cmdTOOLS</BaseCommand></Command2></OriginalCommands></Commands><Key>cmdbarMain</Key><RowIndex>0</RowIndex></cmdbarMain></CommandBars><Commands Collection="true" ElementName="Command"><cmdAPPLICATION ID="cmdAPPLICATION"><Commands Collection="true" ElementName="Command"><Command0 ID="cmdSAVE"><BaseCommand>cmdSAVE</BaseCommand><Key>cmdSAVE</Key><Name>cmdSAVE1</Name></Command0><Command1 ID="cmdPRINT"><BaseCommand>cmdPRINT</BaseCommand><Key>cmdPRINT</Key><Name>cmdPRINT1</Name></Command1><Command2 ID="Separator"><BaseCommand>Separator</BaseCommand><CommandType>Separator</CommandType><Key>Separator</Key><Name>Separator1</Name></Command2><Command3 ID="cmdEXIT"><BaseCommand>cmdEXIT</BaseCommand><Key>cmdEXIT</Key><Name>cmdEXIT1</Name></Command3><OriginalCommands Collection="true" ElementName="Command"><Command0 ID="cmdSAVE"><BaseCommand>cmdSAVE</BaseCommand></Command0><Command1 ID="cmdPRINT"><BaseCommand>cmdPRINT</BaseCommand></Command1><Command2><BaseCommand>Separator</BaseCommand><CommandType>Separator</CommandType></Command2><Command3 ID="cmdEXIT"><BaseCommand>cmdEXIT</BaseCommand></Command3></OriginalCommands></Commands><Key>cmdAPPLICATION</Key><Name>cmdAPPLICATION</Name><Text>Application</Text></cmdAPPLICATION><cmdSAVE ID="cmdSAVE"><Key>cmdSAVE</Key><Name>cmdSAVE</Name><Shortcut>CtrlS</Shortcut><Text>Save</Text></cmdSAVE><cmdPRINT ID="cmdPRINT"><Key>cmdPRINT</Key><Name>cmdPRINT</Name><Shortcut>CtrlP</Shortcut><Text>Print</Text></cmdPRINT><cmdEXIT ID="cmdEXIT"><Key>cmdEXIT</Key><Name>cmdEXIT</Name><Shortcut>AltF4</Shortcut><Text>Exit</Text></cmdEXIT><cmdLOOKUPTABLES ID="cmdLOOKUPTABLES"><Commands Collection="true" ElementName="Command"><Command0 ID="cmdSCHOOLGROUP_GROUPS"><BaseCommand>cmdSCHOOLGROUP_GROUPS</BaseCommand><Key>cmdSCHOOLGROUP_GROUPS</Key><Name>cmdSCHOOLGROUP_GROUPS1</Name></Command0><Command1 ID="cmdANALYSISPEOPLE"><BaseCommand>cmdANALYSISPEOPLE</BaseCommand><Key>cmdANALYSISPEOPLE</Key><Name>cmdANALYSISPEOPLE1</Name></Command1><Command2 ID="Separator"><BaseCommand>Separator</BaseCommand><CommandType>Separator</CommandType><Key>Separator</Key><Name>Separator2</Name></Command2><Command3 ID="cmdANALYSISREQUESTSTATUS"><BaseCommand>cmdANALYSISREQUESTSTATUS</BaseCommand><Key>cmdANALYSISREQUESTSTATUS</Key><Name>cmdANALYSISREQUESTSTATUS1</Name></Command3><Command4 ID="cmdANALYSISREQUESTTYPE"><BaseCommand>cmdANALYSISREQUESTTYPE</BaseCommand><Key>cmdANALYSISREQUESTTYPE</Key><Name>cmdANALYSISREQUESTTYPE1</Name></Command4><Command5 ID="Separator"><BaseCommand>Separator</BaseCommand><CommandType>Separator</CommandType><Key>Separator</Key><Name>Separator3</Name></Command5><Command6 ID="cmdALTERNATEDESCRIPTORS"><BaseCommand>cmdALTERNATEDESCRIPTORS</BaseCommand><Key>cmdALTERNATEDESCRIPTORS</Key><Name>cmdALTERNATEDESCRIPTORS1</Name></Command6><Command7 ID="Separator"><BaseCommand>Separator</BaseCommand><CommandType>Separator</CommandType><Key>Separator</Key><Name>Separator4</Name></Command7><Command8 ID="cmdSCHOOLGROUPASSIGNMENTS"><BaseCommand>cmdSCHOOLGROUPASSIGNMENTS</BaseCommand><Name>cmdSCHOOLGROUPASSIGNMENTS2</Name></Command8><Command9 ID="cmdSCHOOLGROUPASSIGNMENTTYPES"><BaseCommand>cmdSCHOOLGROUPASSIGNMENTTYPES</BaseCommand><Key>cmdSCHOOLGROUPASSIGNMENTTYPES</Key><Name>cmdSCHOOLGROUPASSIGNMENTTYPES1</Name></Command9><OriginalCommands Collection="true" ElementName="Command"><Command0 ID="cmdSCHOOLGROUP_GROUPS"><BaseCommand>cmdSCHOOLGROUP_GROUPS</BaseCommand></Command0><Command1 ID="cmdANALYSISPEOPLE"><BaseCommand>cmdANALYSISPEOPLE</BaseCommand></Command1><Command2><BaseCommand>Separator</BaseCommand><CommandType>Separator</CommandType></Command2><Command3 ID="cmdANALYSISREQUESTSTATUS"><BaseCommand>cmdANALYSISREQUESTSTATUS</BaseCommand></Command3><Command4 ID="cmdANALYSISREQUESTTYPE"><BaseCommand>cmdANALYSISREQUESTTYPE</BaseCommand></Command4><Command5><BaseCommand>Separator</BaseCommand><CommandType>Separator</CommandType></Command5><Command6 ID="cmdALTERNATEDESCRIPTORS"><BaseCommand>cmdALTERNATEDESCRIPTORS</BaseCommand></Command6><Command7><BaseCommand>Separator</BaseCommand><CommandType>Separator</CommandType></Command7><Command8 ID="cmdSCHOOLGROUPASSIGNMENTTYPES"><BaseCommand>cmdSCHOOLGROUPASSIGNMENTTYPES</BaseCommand></Command8></OriginalCommands></Commands><Key>cmdLOOKUPTABLES</Key><Name>cmdLOOKUPTABLES</Name><Text>Lookup Tables</Text></cmdLOOKUPTABLES><cmdSCHOOLGROUP_GROUPS ID="cmdSCHOOLGROUP_GROUPS"><Key>cmdSCHOOLGROUP_GROUPS</Key><Name>cmdSCHOOLGROUP_GROUPS</Name><Shortcut>CtrlShiftS</Shortcut><Text>Schoolgroup Groups</Text></cmdSCHOOLGROUP_GROUPS><cmdTOOLS ID="cmdTOOLS"><Commands Collection="true" ElementName="Command"><Command0 ID="cmdANALYSISTRACKER"><BaseCommand>cmdANALYSISTRACKER</BaseCommand><Key>cmdANALYSISTRACKER</Key><Name>cmdANALYSISTRACKER1</Name></Command0><Command1 ID="cmdDISTRIBUTIONS"><BaseCommand>cmdDISTRIBUTIONS</BaseCommand><Key>cmdDISTRIBUTIONS</Key><Name>cmdDISTRIBUTIONS1</Name></Command1><Command2 ID="cmdDatasourceMaxPaidDate"><BaseCommand>cmdDatasourceMaxPaidDate</BaseCommand><Key>cmdDatasourceMaxPaidDate</Key><Name>cmdDatasourceMaxPaidDate1</Name></Command2><OriginalCommands Collection="true" ElementName="Command"><Command0 ID="cmdANALYSISTRACKER"><BaseCommand>cmdANALYSISTRACKER</BaseCommand></Command0><Command1 ID="cmdDISTRIBUTIONS"><BaseCommand>cmdDISTRIBUTIONS</BaseCommand></Command1><Command2 ID="cmdDatasourceMaxPaidDate"><BaseCommand>cmdDatasourceMaxPaidDate</BaseCommand></Command2><Command3 ID="cmdSCHOOLGROUPASSIGNMENTS"><BaseCommand>cmdSCHOOLGROUPASSIGNMENTS</BaseCommand></Command3></OriginalCommands></Commands><Key>cmdTOOLS</Key><Name>cmdTOOLS</Name><Text>Tools</Text></cmdTOOLS><cmdANALYSISTRACKER ID="cmdANALYSISTRACKER"><Key>cmdANALYSISTRACKER</Key><Name>cmdANALYSISTRACKER</Name><Shortcut>CtrlShiftT</Shortcut><Text>Analysis Tracker</Text></cmdANALYSISTRACKER><cmdANALYSISPEOPLE ID="cmdANALYSISPEOPLE"><Key>cmdANALYSISPEOPLE</Key><Name>cmdANALYSISPEOPLE</Name><Shortcut>CtrlShiftP</Shortcut><Text>Analysis People</Text></cmdANALYSISPEOPLE><cmdANALYSISREQUESTSTATUS ID="cmdANALYSISREQUESTSTATUS"><Key>cmdANALYSISREQUESTSTATUS</Key><Name>cmdANALYSISREQUESTSTATUS</Name><Text>Analysis Request Status</Text></cmdANALYSISREQUESTSTATUS><cmdANALYSISREQUESTTYPE ID="cmdANALYSISREQUESTTYPE"><Key>cmdANALYSISREQUESTTYPE</Key><Name>cmdANALYSISREQUESTTYPE</Name><Text>Analysis Request Types</Text></cmdANALYSISREQUESTTYPE><cmdALTERNATEDESCRIPTORS ID="cmdALTERNATEDESCRIPTORS"><Key>cmdALTERNATEDESCRIPTORS</Key><Name>cmdALTERNATEDESCRIPTORS</Name><Text>Alternate Descriptors</Text></cmdALTERNATEDESCRIPTORS><cmdDISTRIBUTIONS ID="cmdDISTRIBUTIONS"><Key>cmdDISTRIBUTIONS</Key><Name>cmdDISTRIBUTIONS</Name><Text>Custom Distributions</Text></cmdDISTRIBUTIONS><cmdDatasourceMaxPaidDate ID="cmdDatasourceMaxPaidDate"><Key>cmdDatasourceMaxPaidDate</Key><Name>cmdDatasourceMaxPaidDate</Name><Text>Data Source Max Paid Date</Text></cmdDatasourceMaxPaidDate><cmdSCHOOLGROUPASSIGNMENTS ID="cmdSCHOOLGROUPASSIGNMENTS"><Key>cmdSCHOOLGROUPASSIGNMENTS</Key><Name>cmdSCHOOLGROUPASSIGNMENTS</Name><Text>Schoolgroup Assignments</Text></cmdSCHOOLGROUPASSIGNMENTS><cmdSCHOOLGROUPASSIGNMENTTYPES ID="cmdSCHOOLGROUPASSIGNMENTTYPES"><Key>cmdSCHOOLGROUPASSIGNMENTTYPES</Key><Name>cmdSCHOOLGROUPASSIGNMENTTYPES</Name><Text>Schoolgroup Assignment Types</Text></cmdSCHOOLGROUPASSIGNMENTTYPES></Commands><LeftRebar ID="Left" /><RightRebar ID="Right" /><TopRebar ID="Top"><CommandBars Collection="true"><cmdbarMain><RowIndex>0</RowIndex></cmdbarMain></CommandBars></TopRebar></UICommandManager></LayoutString>
+            <IsCurrentLayout>True</IsCurrentLayout>
+        </Layout0>
+    </Layouts>
+</CommandManagerLayoutFile>

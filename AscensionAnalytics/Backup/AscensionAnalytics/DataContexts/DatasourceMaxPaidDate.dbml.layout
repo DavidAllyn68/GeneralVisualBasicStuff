@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DatasourceMaxPaidDate">
+  <DataContextMoniker Name="/DatasourceMaxPaidDateDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4ee72c96-55cd-4659-beef-8e248d2b20a7" absoluteBounds="3.875, 1.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DatasourceMaxPaidDateDataContext/DatasourceMaxPaidDate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8396b641-88b1-4009-991d-d62e41430bd7" absoluteBounds="3.8899999999999997, 2.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

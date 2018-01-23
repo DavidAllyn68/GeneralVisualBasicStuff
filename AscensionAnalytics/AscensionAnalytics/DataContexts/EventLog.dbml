@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="EventLogDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.David_EventLog_Details" Member="David_EventLog_Details">
+    <Type Name="David_EventLog_Detail">
+      <Column Name="EventLogId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Log]" Member="Log" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Source" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Destination" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Operation" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Result" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Completed" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="[Begin]" Member="Begin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[End]" Member="End" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DurationInMinutes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DurationInSeconds" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DurationDescription" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

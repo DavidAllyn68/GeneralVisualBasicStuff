@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="SchoolgroupGroupsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.schoolgroup_group" Member="schoolgroup_groups">
+    <Type Name="schoolgroup_group">
+      <Column Name="schoolgroup_group_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="schoolgroup_group_cd" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="schoolgroup_group_ds" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="is_active" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="schoolgroup_group_schoolgroup_group_x_schoolgroup" Member="schoolgroup_group_x_schoolgroups" ThisKey="schoolgroup_group_id" OtherKey="schoolgroup_group_id" Type="schoolgroup_group_x_schoolgroup" />
+    </Type>
+  </Table>
+  <Table Name="dbo.schoolgroup_group_x_schoolgroup" Member="schoolgroup_group_x_schoolgroups">
+    <Type Name="schoolgroup_group_x_schoolgroup">
+      <Column Name="schoolgroup_group_x_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="schoolgroup_group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="schoolgroup_cd" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="is_active" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="schoolgroup_group_schoolgroup_group_x_schoolgroup" Member="schoolgroup_group" ThisKey="schoolgroup_group_id" OtherKey="schoolgroup_group_id" Type="schoolgroup_group" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="schoolgroup_group_schoolgroups_schoolgroup_group_x_schoolgroup" Member="schoolgroup_group_schoolgroups" ThisKey="schoolgroup_cd" OtherKey="schoolgroup_cd" Type="schoolgroup_group_schoolgroups" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.schoolgroups" Member="schoolgroup_group_schoolgroups">
+    <Type Name="schoolgroup_group_schoolgroups">
+      <Column Name="school_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_cd" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup" Type="System.String" DbType="VarChar(103)" CanBeNull="true" />
+      <Association Name="schoolgroup_group_schoolgroups_schoolgroup_group_x_schoolgroup" Member="schoolgroup_group_x_schoolgroups" ThisKey="schoolgroup_cd" OtherKey="schoolgroup_cd" Type="schoolgroup_group_x_schoolgroup" />
+    </Type>
+  </Table>
+  <Function Name="dbo.schoolgroups_selectAssociated" Method="schoolgroups_selectAssociated">
+    <Parameter Name="schoolgroup_group_cd" Type="System.String" DbType="Char(10)" />
+    <ElementType Name="schoolgroups_selectAssociatedResult">
+      <Column Name="prem_schoolid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="school_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="prem_schoolgroupid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="claims_schoolgroupid" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_cd" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup" Type="System.String" DbType="VarChar(63)" CanBeNull="true" />
+      <Column Name="isConsortium" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.schoolgroups_selectNotAssociated" Method="schoolgroups_selectNotAssociated">
+    <Parameter Name="schoolgroup_group_cd" Type="System.String" DbType="Char(10)" />
+    <ElementType Name="schoolgroups_selectNotAssociatedResult">
+      <Column Name="prem_schoolid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="school_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="prem_schoolgroupid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="claims_schoolgroupid" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_cd" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup" Type="System.String" DbType="VarChar(63)" CanBeNull="true" />
+      <Column Name="isConsortium" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.schoolgroup_group_insertAssociation" Method="schoolgroup_group_insertAssociation">
+    <Parameter Name="schoolgroup_group_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="schoolgroup_cd" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.schoolgroup_group_deleteAssociation" Method="schoolgroup_group_deleteAssociation">
+    <Parameter Name="schoolgroup_group_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="schoolgroup_cd" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

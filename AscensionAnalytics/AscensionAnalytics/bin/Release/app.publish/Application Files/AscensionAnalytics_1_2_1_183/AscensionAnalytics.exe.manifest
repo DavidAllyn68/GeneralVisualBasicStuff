@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity version="1.2.1.183" name="AscensionAnalytics.exe" publicKeyToken="dad241e6ace7508b" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Images\NewAscensionAnalytics.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="AscensionAnalytics" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="AscensionAnalytics.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="adodb.dll" size="110592">
+      <assemblyIdentity name="ADODB" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>jynB3qMgo1Dc2GoQqehY0lCH4Yo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AscensionAnalytics.exe" size="1949696">
+      <assemblyIdentity name="AscensionAnalytics" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>kIEQ5idXR0aRpXiwjio6ufltLNE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Janus.Data.v4.dll" size="225280">
+      <assemblyIdentity name="Janus.Data.v4" version="4.0.14.0" publicKeyToken="21D5517571B185BF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>DuEVHMh59DBs6fwfYekdw+Yt7To=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Janus.Windows.ButtonBar.v4.dll" size="372736">
+      <assemblyIdentity name="Janus.Windows.ButtonBar.v4" version="4.0.14.0" publicKeyToken="21D5517571B185BF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>g7SlNvCd5ktOALM0xlTCLaoSzRg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Janus.Windows.CalendarCombo.v4.dll" size="188416">
+      <assemblyIdentity name="Janus.Windows.CalendarCombo.v4" version="4.0.14.0" publicKeyToken="21D5517571B185BF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ovMMpAN/W0mvIK9cn/dG/y9LR3c=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Janus.Windows.Common.v4.dll" size="225280">
+      <assemblyIdentity name="Janus.Windows.Common.v4" version="4.0.14.0" publicKeyToken="21D5517571B185BF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>R4/pRNETHVQgm555Nn14NHhrPF4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Janus.Windows.ExplorerBar.v4.dll" size="311296">
+      <assemblyIdentity name="Janus.Windows.ExplorerBar.v4" version="4.0.14.0" publicKeyToken="21D5517571B185BF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>MmzKJ6xfCiFAw55caC93yqVsi48=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Janus.Windows.FilterEditor.v4.dll" size="78848">
+      <assemblyIdentity name="Janus.Windows.FilterEditor.v4" version="4.0.14.0" publicKeyToken="21D5517571B185BF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>EDXL/Kl+zmkEBnnBtYkVFfrWRdM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Janus.Windows.GridEX.v4.dll" size="1437696">
+      <assemblyIdentity name="Janus.Windows.GridEX.v4" version="4.0.14.0" publicKeyToken="21D5517571B185BF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>UpNI6c43LiRfzdsRKgaJHfQWuXY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Janus.Windows.Ribbon.v4.dll" size="913408">
+      <assemblyIdentity name="Janus.Windows.Ribbon.v4" version="4.0.14.0" publicKeyToken="21D5517571B185BF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>QZWRnVF4XuT/fin52uwD5apMdxk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Janus.Windows.Schedule.v4.dll" size="843776">
+      <assemblyIdentity name="Janus.Windows.Schedule.v4" version="4.0.14.0" publicKeyToken="21D5517571B185BF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>VPbeZyNwEg/ucjVMgeUTZGM9h8M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Janus.Windows.TimeLine.v4.dll" size="626688">
+      <assemblyIdentity name="Janus.Windows.TimeLine.v4" version="4.0.14.0" publicKeyToken="21D5517571B185BF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>RfbTFI5hCyz1SoHgfgxCMAPQS1A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Janus.Windows.UI.v4.dll" size="1748992">
+      <assemblyIdentity name="Janus.Windows.UI.v4" version="4.0.14.0" publicKeyToken="21D5517571B185BF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>1IDa716IOnyEXIqltVH/iPL69uc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="AscensionAnalytics.exe.config" size="3477">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>f02WxUDGGqZlxEkfIfAiTFbyymQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\ChooseFolder 32x32.png" size="1444">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>tZxl5otK+1O6TZWiRBy22JddgvY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\NewAscensionAnalytics.ico" size="115567">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mNYe2AN+tij6ySSY0ah3u7ovjx4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\RemoveItem.png" size="7870">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>4zRgbVoqlRp3juHkd2ndiG13Mbo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\ReportBy_Template.png" size="7855">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>UKjZSmJ9jgU25E7RNjw/sFCM6I8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Save.png" size="4301">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>AXYG5uo9xlnuF8VmoJ89wnRUu3s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Sum.ico" size="45984">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gcLnCSqcAWRPqoXb5S0uhbYR6J0=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=REN\david" issuerKeyHash="9b843a0e46ad24ec872737add435718fac607453" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>8NaMwjX2VnCIkxBJkxRPg6McLRs=</DigestValue></Reference></SignedInfo><SignatureValue>nZ2Dyp/1VIEh6enA0yIn8rIn5C1KT5PfyJcLeJh/pQiPXx9HxRGUWsxpQovSK8nieOm8UInZYdmyj2Hk0klOBR5y17xrbR5hA0rbrrFVHjm1uoyiwl7TAj/PDuS/st5oyLeZgWcg8uppA7QnfzQ07GGYWMUdtwCf/hQAmtRFlrg=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tEJpCy6DuKAQndJYcGwLWB8szO6DdStquyor2atEBvuODHZq0K3af3EJupyVwDJSt6b4c9e7UebyLC9y2LPMm1RSvPcT2BE73FFkWRM99tGstGB6n2LCqXcDFVAK25T10xvhcsn0r2WKM7j0cvbq0WeNhc6D7rAgOv8QYE11QR0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="1b2d1ca3834f1493491093887056f635c28cd6f0" Description="" Url=""><as:assemblyIdentity version="1.2.1.183" name="AscensionAnalytics.exe" publicKeyToken="dad241e6ace7508b" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=REN\david</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>kOG0L+vsUyaWBR4BhxFE+8sZ+Ck=</DigestValue></Reference></SignedInfo><SignatureValue>TYMsMVzwMT6FxAy1dtbLvWk2yL7YA08UCABVYaweCecyORDurR4jLRwLXMDUnxGU8gAlGqMTWPiVj8mtxjxm/e6zMh8fxJOgGWv3ncsALO1O2U75j/OXO8kPhIuWS6gRUHd4RkpzLf5xzrVlVI0a5mjwJiZe9v6tAiqIS3JmAcY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tEJpCy6DuKAQndJYcGwLWB8szO6DdStquyor2atEBvuODHZq0K3af3EJupyVwDJSt6b4c9e7UebyLC9y2LPMm1RSvPcT2BE73FFkWRM99tGstGB6n2LCqXcDFVAK25T10xvhcsn0r2WKM7j0cvbq0WeNhc6D7rAgOv8QYE11QR0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBvTCCASagAwIBAgIQQayDmgeOMrRB9cK658AzcjANBgkqhkiG9w0BAQUFADAdMRswGQYDVQQDHhIAUgBFAE4AXABkAGEAdgBpAGQwHhcNMTQwMTE3MTc0MDI3WhcNMTUwMTE3MjM0MDI3WjAdMRswGQYDVQQDHhIAUgBFAE4AXABkAGEAdgBpAGQwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALRCaQsug7igEJ3SWHBsC1gfLMzug3UrarsqK9mrRAb7jgx2atCt2n9xCbqclcAyUrem+HPXu1Hm8iwvctizzJtUUrz3E9gRO9xRZFkTPfbRrLRgep9iwql3AxVQCtuU9dMb4XLJ9K9lijO49HL26tFnjYXOg+6wIDr/EGBNdUEdAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAIvSQVXi1XGTyDxpzGg6C5IKA76o96PW2qhUIhCffPA5X3wE5EjgU9HzGWVQ25sjTukZ3+wAVpZG9LEijjh2oMoClNa9bw2xvXdbEVjKjiQSwxu65ta9F3OXQb+RcZWqc9WLjX97m0U81ktsXwCVJ2ZxW9NgKrqARlZBOjLg5cXE=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

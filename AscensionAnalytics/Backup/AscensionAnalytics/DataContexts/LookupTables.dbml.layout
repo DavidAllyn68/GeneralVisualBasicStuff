@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LookupTables">
+  <DataContextMoniker Name="/LookupTablesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="63405b96-2d2f-405e-96bf-cc387154aa3c" absoluteBounds="1.25, 1.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LookupTablesDataContext/PolicyYear" />
+      <nestedChildShapes>
+        <elementListCompartment Id="312b1afd-c93d-4f4a-97de-25c7c6fbf3ec" absoluteBounds="1.2649999999999997, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="88b16b9b-0226-4514-b9b0-746773d46aad" absoluteBounds="6.375, 1.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/LookupTablesDataContext/LookupAnalysisPeople" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44325425-a26c-4dad-98ab-68bf0491a363" absoluteBounds="6.39, 1.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="868bcc9d-3d86-4818-b717-21fb05c5ed12" absoluteBounds="4.5, 4, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LookupTablesDataContext/LookupCurrentAnalysisSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b440a6d-211d-4bf6-8e5a-67798765c5db" absoluteBounds="4.515, 4.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8edea5ed-0d96-47f2-8be6-bf364789ffc9" absoluteBounds="3.75, 1.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LookupTablesDataContext/LookupSchoolgroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="749f991c-c782-4332-a064-5e59559b4184" absoluteBounds="3.765, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7789fc3-6006-4f70-af6e-27c7a6238c68" absoluteBounds="1.875, 4.125, 2, 1.0016910807291668">
+      <DataClassMoniker Name="/LookupTablesDataContext/LookupSchools" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0451261d-07b5-4f3e-88e3-fac369954af3" absoluteBounds="1.8900000000000001, 4.585, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

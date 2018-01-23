@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/HthDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a3c2c9e2-f782-4686-b308-50eedb443e5b" absoluteBounds="0.875, 0.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HthDataDataContext/HTH_GROUP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="285883b6-a698-4f04-9250-9725f525f3a6" absoluteBounds="0.89000000000000012, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dec6301c-a38c-4106-9231-a6f9a29d06f6" absoluteBounds="7.125, 1.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HthDataDataContext/HthDataSchoolgroups" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9cc07d9f-a69c-4cbe-ab25-35a401e3a3ef" absoluteBounds="7.14, 1.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="831e7dcd-b892-4fe0-a974-9b1fd4094d9c" absoluteBounds="4, 1.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HthDataDataContext/HTH_GROUPS_MAP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07e3efd2-e7ef-476f-8eef-dee6441306bb" absoluteBounds="4.015, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 1.63064697265625); (4 : 1.63064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HthDataDataContext/HTH_GROUP/HTH_GROUP_HTH_GROUPS_MAP" />
+      <nodes>
+        <classShapeMoniker Id="a3c2c9e2-f782-4686-b308-50eedb443e5b" />
+        <classShapeMoniker Id="831e7dcd-b892-4fe0-a974-9b1fd4094d9c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.125 : 2.16429768880208); (6 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HthDataDataContext/HthDataSchoolgroups/HthDataSchoolgroups_HTH_GROUPS_MAP" />
+      <nodes>
+        <classShapeMoniker Id="dec6301c-a38c-4106-9231-a6f9a29d06f6" />
+        <classShapeMoniker Id="831e7dcd-b892-4fe0-a974-9b1fd4094d9c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

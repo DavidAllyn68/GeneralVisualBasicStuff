@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HthBenefitMapping">
+  <DataContextMoniker Name="/HthBenefitMappingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d4649871-11f9-43fe-9d2a-fdd5be1b3009" absoluteBounds="3.75, 1.625, 2.25, 1.5785953776041666">
+      <DataClassMoniker Name="/HthBenefitMappingDataContext/HTH_BenefitMapping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0a2103f-7dc5-4250-ad3f-aab79a77737f" absoluteBounds="3.7649999999999997, 2.085, 2.2199999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="43936a43-7da8-4daa-bc2c-ed2e95296da2" absoluteBounds="0.875, 1.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/HthBenefitMappingDataContext/HTH_BENEFITS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f69ee27b-af10-4322-a463-466ae41d7bad" absoluteBounds="0.89000000000000012, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a50e275-e7d9-4f32-9dd9-3ef596e6076d" absoluteBounds="6.875, 1.5, 2.625, 1.1939925130208333">
+      <DataClassMoniker Name="/HthBenefitMappingDataContext/HTH_POS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c5e6213a-2803-4b69-87b1-f7c47a47bd6f" absoluteBounds="6.89, 1.96, 2.5949999999999998, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="58bed01c-c982-4926-87e9-9a79910ac559" absoluteBounds="4, 3.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/HthBenefitMappingDataContext/HthMapping_AscensionBenefits" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b6c4ac2-d43f-4a9d-9838-cd7d75c563ac" absoluteBounds="4.015, 4.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 2.22199625651042); (3.75 : 2.22199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HthBenefitMappingDataContext/HTH_BENEFITS/HTH_BENEFITS_HTH_BenefitMapping" />
+      <nodes>
+        <classShapeMoniker Id="43936a43-7da8-4daa-bc2c-ed2e95296da2" />
+        <classShapeMoniker Id="d4649871-11f9-43fe-9d2a-fdd5be1b3009" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.875 : 2.15949625651042); (6 : 2.15949625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HthBenefitMappingDataContext/HTH_POS/HTH_POS_HTH_BenefitMapping" />
+      <nodes>
+        <classShapeMoniker Id="7a50e275-e7d9-4f32-9dd9-3ef596e6076d" />
+        <classShapeMoniker Id="d4649871-11f9-43fe-9d2a-fdd5be1b3009" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 3.625); (5 : 3.20359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HthBenefitMappingDataContext/HthMapping_AscensionBenefits/HthMapping_AscensionBenefits_HTH_BenefitMapping" />
+      <nodes>
+        <classShapeMoniker Id="58bed01c-c982-4926-87e9-9a79910ac559" />
+        <classShapeMoniker Id="d4649871-11f9-43fe-9d2a-fdd5be1b3009" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ProgramRating">
+  <DataContextMoniker Name="/ProgramRatingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3c00bacd-f7ae-41d8-9055-6ea201b1fe58" absoluteBounds="4.75, 2.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/ProgramRatingDataContext/Rating_StatisticType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="374a5885-7f9d-4080-b7ef-83556c07946f" absoluteBounds="4.765, 2.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd8508db-2eef-4ce3-b034-7c6b0e0b4f07" absoluteBounds="1.5, 1.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ProgramRatingDataContext/Rating_PolicyStatistic" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7c63aba-2b60-44ec-8cba-0a5acef6f45f" absoluteBounds="1.5149999999999997, 2.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.75 : 2.66429768880208); (3.5 : 2.66429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ProgramRatingDataContext/Rating_StatisticType/Rating_StatisticType_Rating_PolicyStatistic" />
+      <nodes>
+        <classShapeMoniker Id="3c00bacd-f7ae-41d8-9055-6ea201b1fe58" />
+        <classShapeMoniker Id="cd8508db-2eef-4ce3-b034-7c6b0e0b4f07" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

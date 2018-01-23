@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SchoolgroupGroups">
+  <DataContextMoniker Name="/SchoolgroupGroupsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d4ac4a60-6e50-4103-8779-04792375c278" absoluteBounds="1.375, 2.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SchoolgroupGroupsDataContext/schoolgroup_group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0302b49e-f5f3-48da-a418-d76bb8a88053" absoluteBounds="1.3899999999999997, 3.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c8bd17dc-3169-49db-b199-2ef46b5c8b30" absoluteBounds="4.375, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SchoolgroupGroupsDataContext/schoolgroup_group_x_schoolgroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d47a3dd5-002f-41f1-a7f9-ec27b1510a7f" absoluteBounds="4.39, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 3.98964705989583); (4.8437475 : 3.98964705989583); (4.8437475 : 2.45359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SchoolgroupGroupsDataContext/schoolgroup_group/schoolgroup_group_schoolgroup_group_x_schoolgroup" />
+      <nodes>
+        <classShapeMoniker Id="d4ac4a60-6e50-4103-8779-04792375c278" />
+        <classShapeMoniker Id="c8bd17dc-3169-49db-b199-2ef46b5c8b30" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ce1e78ad-9b51-46bf-9957-4e6993ad8d74" absoluteBounds="7.25, 2.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SchoolgroupGroupsDataContext/schoolgroup_group_schoolgroups" />
+      <nestedChildShapes>
+        <elementListCompartment Id="477a2df5-dba9-43f3-b688-c41072075638" absoluteBounds="7.2650000000000006, 3.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.25 : 3.43232352994792); (5.64062625 : 3.43232352994792); (5.64062625 : 2.45359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SchoolgroupGroupsDataContext/schoolgroup_group_schoolgroups/schoolgroup_group_schoolgroups_schoolgroup_group_x_schoolgroup" />
+      <nodes>
+        <classShapeMoniker Id="ce1e78ad-9b51-46bf-9957-4e6993ad8d74" />
+        <classShapeMoniker Id="c8bd17dc-3169-49db-b199-2ef46b5c8b30" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

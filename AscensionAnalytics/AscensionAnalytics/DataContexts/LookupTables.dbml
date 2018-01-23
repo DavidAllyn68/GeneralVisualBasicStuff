@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="LookupTablesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PolicyYears" Member="PolicyYears">
+    <Type Name="PolicyYear">
+      <Column Name="PolicyYearId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PolicyYear" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FromYear" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="ToYear" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnalysisPeople" Member="LookupAnalysisPeoples">
+    <Type Name="LookupAnalysisPeople">
+      <Column Name="PersonId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="PersonTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="WindowsUserName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CurrentAnalysisSettings" Member="LookupCurrentAnalysisSettings">
+    <Type Name="LookupCurrentAnalysisSetting">
+      <Column Name="AnalysisSetttingId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AnalysisSetting" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SettingValue" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SettingEffectiveDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.schoolgroups" Member="LookupSchoolgroups">
+    <Type Name="LookupSchoolgroup">
+      <Column Name="school_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_cd" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup" Type="System.String" DbType="VarChar(103)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.schools" Member="LookupSchools">
+    <Type Name="LookupSchools">
+      <Column Name="school_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

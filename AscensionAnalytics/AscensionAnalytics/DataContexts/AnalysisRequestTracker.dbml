@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="AnalysisRequestTrackerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AnalysisRequestLog" Member="AnalysisRequestLogs">
+    <Type Name="AnalysisRequestLog">
+      <Column Name="LogId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AnalysisId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntryText" Type="System.String" DbType="VarChar(8000) NOT NULL" CanBeNull="false" />
+      <Column Name="EntryTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EffortMinutes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DataActivityEntry" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="EntryUser" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="AnalysisRequest_AnalysisRequestLog" Member="AnalysisRequest" ThisKey="AnalysisId" OtherKey="AnalysisId" Type="AnalysisRequest" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnalysisRequestStatus" Member="AnalysisRequestStatus">
+    <Type Name="AnalysisRequestStatus">
+      <Column Name="StatusId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="AnalysisRequestStatus_AnalysisRequest" Member="AnalysisRequests" ThisKey="StatusId" OtherKey="StatusId" Type="AnalysisRequest" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnalysisRequestType" Member="AnalysisRequestTypes">
+    <Type Name="AnalysisRequestType">
+      <Column Name="RequestTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RequestType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="AnalysisRequestType_AnalysisRequest" Member="AnalysisRequests" ThisKey="RequestTypeId" OtherKey="RequestTypeId" Type="AnalysisRequest" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnalysisRequest" Member="AnalysisRequests">
+    <Type Name="AnalysisRequest">
+      <Column Name="AnalysisId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Milestone" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="MilestoneDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RequestorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AssigneeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DirectoryFullPath" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="StatusId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RequestTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OpenDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CloseDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedByUser" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifyingByUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="AnalysisRequest_AnalysisRequestLog" Member="AnalysisRequestLogs" ThisKey="AnalysisId" OtherKey="AnalysisId" Type="AnalysisRequestLog" />
+      <Association Name="AnalysisRequestStatus_AnalysisRequest" Member="AnalysisRequestStatus" ThisKey="StatusId" OtherKey="StatusId" Type="AnalysisRequestStatus" IsForeignKey="true" />
+      <Association Name="AnalysisRequestType_AnalysisRequest" Member="AnalysisRequestType" ThisKey="RequestTypeId" OtherKey="RequestTypeId" Type="AnalysisRequestType" IsForeignKey="true" />
+      <Association Name="AnalysisRequestPeople_AnalysisRequest" Member="AnalysisPeople" ThisKey="AssigneeId" OtherKey="PersonId" Type="AnalysisRequestPeople" IsForeignKey="true" />
+      <Association Name="AnalysisRequestPeople_AnalysisRequest1" Member="AnalysisRequestPeople" ThisKey="RequestorId" OtherKey="PersonId" Type="AnalysisRequestPeople" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnalysisPeople_PersonType" Member="AnalysisPeople_PersonTypes">
+    <Type Name="AnalysisPeople_PersonType">
+      <Column Name="PersonTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PersonType" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="AnalysisPeople_PersonType_AnalysisRequestPeople" Member="AnalysisRequestPeoples" ThisKey="PersonTypeId" OtherKey="PersonTypeId" Type="AnalysisRequestPeople" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnalysisPeople" Member="AnalysisRequestPeoples">
+    <Type Name="AnalysisRequestPeople">
+      <Column Name="PersonId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="PersonTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="WindowsUserName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="AnalysisRequestPeople_AnalysisRequest" Member="AnalysisRequests" ThisKey="PersonId" OtherKey="AssigneeId" Type="AnalysisRequest" />
+      <Association Name="AnalysisRequestPeople_AnalysisRequest1" Member="AnalysisRequests1" ThisKey="PersonId" OtherKey="RequestorId" Type="AnalysisRequest" />
+      <Association Name="AnalysisPeople_PersonType_AnalysisRequestPeople" Member="AnalysisPeople_PersonType" ThisKey="PersonTypeId" OtherKey="PersonTypeId" Type="AnalysisPeople_PersonType" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

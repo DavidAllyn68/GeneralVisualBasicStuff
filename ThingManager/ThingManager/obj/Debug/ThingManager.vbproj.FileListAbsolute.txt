@@ -1,0 +1,11 @@
+L:\Visual Studio 2012\ThingManager\ThingManager\bin\Debug\ThingManager.exe.config
+L:\Visual Studio 2012\ThingManager\ThingManager\bin\Debug\ThingManager.exe
+L:\Visual Studio 2012\ThingManager\ThingManager\bin\Debug\ThingManager.pdb
+L:\Visual Studio 2012\ThingManager\ThingManager\bin\Debug\ThingManager.xml
+L:\Visual Studio 2012\ThingManager\ThingManager\obj\Debug\ThingManager.ThingEditor.resources
+L:\Visual Studio 2012\ThingManager\ThingManager\obj\Debug\ThingManager.Resources.resources
+L:\Visual Studio 2012\ThingManager\ThingManager\obj\Debug\ThingManager.vbproj.GenerateResource.Cache
+L:\Visual Studio 2012\ThingManager\ThingManager\obj\Debug\ThingManager.exe
+L:\Visual Studio 2012\ThingManager\ThingManager\obj\Debug\ThingManager.xml
+L:\Visual Studio 2012\ThingManager\ThingManager\obj\Debug\ThingManager.pdb
+L:\Visual Studio 2012\ThingManager\ThingManager\obj\Debug\ThingManager.AddAssociation.resources

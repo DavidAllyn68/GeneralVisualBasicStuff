@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DistriubtionTiers">
+  <DataContextMoniker Name="/DistriubtionTiersDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b3f1c429-0934-44b1-94ee-4c4565bb7ad4" absoluteBounds="1.375, 1.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DistriubtionTiersDataContext/Distribution" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e126e043-6593-4f0d-ba09-d04d0717f4ff" absoluteBounds="1.3900000000000001, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68dcd839-b870-4163-b6b4-8a0caa84ab18" absoluteBounds="5.75, 2.25, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DistriubtionTiersDataContext/DistributionTier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a115162-1e01-4f37-8b65-fb13c94b3a49" absoluteBounds="5.7650000000000006, 2.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 1.6874995); (6.75 : 1.6874995); (6.75 : 2.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DistriubtionTiersDataContext/Distribution/Distribution_DistributionTier" />
+      <nodes>
+        <classShapeMoniker Id="b3f1c429-0934-44b1-94ee-4c4565bb7ad4" />
+        <classShapeMoniker Id="68dcd839-b870-4163-b6b4-8a0caa84ab18" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

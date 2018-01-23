@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="OverlandParkEnrollmentActivityDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.OverlandPark_Groups" Member="OverlandPark_Enrollment_Groups">
+    <Type Name="OverlandPark_Enrollment_Group">
+      <Column Name="OverlandParkGroupId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OverlandParkGroupCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="OverlandParkGroupName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="OverlandPark_Enrollment_Group_OverlandPark_EnrollmentActivity" Member="OverlandPark_EnrollmentActivities" ThisKey="OverlandParkGroupId" OtherKey="OverlandParkGroupId" Type="OverlandPark_EnrollmentActivity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OverlandPark_EnrollmentActivity" Member="OverlandPark_EnrollmentActivities">
+    <Type Name="OverlandPark_EnrollmentActivity">
+      <Column Name="EnrollmentActivityId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RosterLoadDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PolicyNumber" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Underwriter" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AscensionUnderwriterCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClaimsGroupIdentifier" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="OverlandParkGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PolicyYear" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="PlanName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="TermName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="InsuredClass" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="GrossCost" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="BookPremium" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Enrollees" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalCost" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPremium" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="OverlandPark_Enrollment_Group_OverlandPark_EnrollmentActivity" Member="OverlandPark_Enrollment_Group" ThisKey="OverlandParkGroupId" OtherKey="OverlandParkGroupId" Type="OverlandPark_Enrollment_Group" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

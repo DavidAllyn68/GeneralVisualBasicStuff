@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.25, 10.5" name="DataWarehouseBenefits">
+  <DataContextMoniker Name="/DataWarehouseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5e610641-1def-4b24-9739-bd1248780835" absoluteBounds="6.875, 3.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataWarehouseDataContext/DataWarehouseTypeOfService" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b130e6e7-7c1c-4b24-8b5e-33fb3bcb8cd8" absoluteBounds="6.8900000000000006, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d8dfb81a-e026-4c44-8288-0cf0f4c3d39a" absoluteBounds="8.625, 6.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataWarehouseDataContext/DataWarehouseTypeOfServiceCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="740c98b5-f736-48fa-9597-39841ad15b17" absoluteBounds="8.64, 6.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b1c92c12-700b-4201-ba10-5bd2f9ec0b75" absoluteBounds="10, 4.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataWarehouseDataContext/DataWarehouseTypeOfServiceSubCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b9b23f5-40d4-41c4-a065-51819a545987" absoluteBounds="10.015, 5.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.4062505 : 6.25); (9.4062505 : 4.28125); (8.875 : 4.28125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataWarehouseDataContext/DataWarehouseTypeOfServiceCategory/DataWarehouseTypeOfServiceCategory_DataWarehouseTypeOfService" />
+      <nodes>
+        <classShapeMoniker Id="d8dfb81a-e026-4c44-8288-0cf0f4c3d39a" />
+        <classShapeMoniker Id="5e610641-1def-4b24-9739-bd1248780835" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10 : 5.19794840494792); (9.48958383333333 : 5.19794840494792 : JumpStart); (9.32291716666667 : 5.19794840494792 : JumpEnd); (8.875 : 5.19794840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataWarehouseDataContext/DataWarehouseTypeOfServiceSubCategory/DataWarehouseTypeOfServiceSubCategory_DataWarehouseTypeOfService" />
+      <nodes>
+        <classShapeMoniker Id="b1c92c12-700b-4201-ba10-5bd2f9ec0b75" />
+        <classShapeMoniker Id="5e610641-1def-4b24-9739-bd1248780835" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1c93e344-4182-43e7-845c-c71aaa1b65cf" absoluteBounds="1.25, 4.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataWarehouseDataContext/DataWarehouseDiagnoses" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa6c39ee-3dd3-4e2c-9252-4761f720c86e" absoluteBounds="1.2650000000000001, 4.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7940dd4e-7f58-43e8-973e-47848ee06b24" absoluteBounds="4.125, 6.125, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DataWarehouseDataContext/DataWarehouseDatasources" />
+      <nestedChildShapes>
+        <elementListCompartment Id="30be031d-51ab-4537-a943-5dae42e346ed" absoluteBounds="4.14, 6.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b569075-3b73-4420-9a06-986fb5917b6c" absoluteBounds="0.875, 7.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataWarehouseDataContext/DataWarehouseDiagnosisCategories" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8230c18a-3279-44ff-ad0c-7111a4f7f746" absoluteBounds="0.89, 7.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.125 : 6.39024983723958); (3.25 : 6.39024983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataWarehouseDataContext/DataWarehouseDatasources/DataWarehouseDatasources_DataWarehouseDiagnoses" />
+      <nodes>
+        <classShapeMoniker Id="7940dd4e-7f58-43e8-973e-47848ee06b24" />
+        <classShapeMoniker Id="1c93e344-4182-43e7-845c-c71aaa1b65cf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.0625 : 7.375); (2.0625 : 6.65549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataWarehouseDataContext/DataWarehouseDiagnosisCategories/DataWarehouseDiagnosisCategories_DataWarehouseDiagnoses" />
+      <nodes>
+        <classShapeMoniker Id="2b569075-3b73-4420-9a06-986fb5917b6c" />
+        <classShapeMoniker Id="1c93e344-4182-43e7-845c-c71aaa1b65cf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="836b31d4-31ef-4b0a-b88c-e219c0093a1f" absoluteBounds="3.25, 9, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataWarehouseDataContext/DataWarehouseDiagnosisCodeType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eaff4635-9c4b-42cb-8f1a-8d45ffeac067" absoluteBounds="3.265, 9.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.6875 : 9); (3.6875 : 5.69794840494792); (3.25 : 5.69794840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataWarehouseDataContext/DataWarehouseDiagnosisCodeType/DataWarehouseDiagnosisCodeType_DataWarehouseDiagnoses" />
+      <nodes>
+        <classShapeMoniker Id="836b31d4-31ef-4b0a-b88c-e219c0093a1f" />
+        <classShapeMoniker Id="1c93e344-4182-43e7-845c-c71aaa1b65cf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="426b115e-4ba4-42a2-822d-ab5fb607ae38" absoluteBounds="4.125, 3.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataWarehouseDataContext/DataWarehouseService" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8378feb5-a858-4cca-a41c-452a17b2d7d0" absoluteBounds="4.14, 3.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a32c44f-7c53-424e-a97f-0a761eee92e2" absoluteBounds="7, 2.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataWarehouseDataContext/DataWarehouseServiceCodeType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7224e11f-36b4-4904-9c68-c006fc58aec5" absoluteBounds="7.015, 2.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.875 : 4.51044840494792); (6.125 : 4.51044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataWarehouseDataContext/DataWarehouseTypeOfService/DataWarehouseTypeOfService_DataWarehouseService" />
+      <nodes>
+        <classShapeMoniker Id="5e610641-1def-4b24-9739-bd1248780835" />
+        <classShapeMoniker Id="426b115e-4ba4-42a2-822d-ab5fb607ae38" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7 : 2.8124995); (5.125 : 2.8124995); (5.125 : 3.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataWarehouseDataContext/DataWarehouseServiceCodeType/DataWarehouseServiceCodeType_DataWarehouseService" />
+      <nodes>
+        <classShapeMoniker Id="4a32c44f-7c53-424e-a97f-0a761eee92e2" />
+        <classShapeMoniker Id="426b115e-4ba4-42a2-822d-ab5fb607ae38" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="432566bf-df0f-4713-92b3-c73d57a0b009" absoluteBounds="1.25, 1.375, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DataWarehouseDataContext/DataWarehouseBenefit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f833740-85d9-46c7-8865-91299cefdf12" absoluteBounds="1.2650000000000001, 1.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="76c06932-9dc5-4996-817f-908992db51e6" absoluteBounds="3.875, 0.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataWarehouseDataContext/DataWarehouseBenefitCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="329ea511-fd82-48b5-b37d-a34f5d447fc0" absoluteBounds="3.8899999999999997, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.875 : 1.72199625651042); (3.25 : 1.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataWarehouseDataContext/DataWarehouseBenefitCategory/DataWarehouseBenefitCategory_DataWarehouseBenefit" />
+      <nodes>
+        <classShapeMoniker Id="76c06932-9dc5-4996-817f-908992db51e6" />
+        <classShapeMoniker Id="432566bf-df0f-4713-92b3-c73d57a0b009" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

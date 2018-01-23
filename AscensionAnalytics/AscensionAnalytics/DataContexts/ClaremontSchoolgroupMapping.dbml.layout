@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ClaremontSchoolgroupMapping">
+  <DataContextMoniker Name="/ClaremontSchoolgroupMappingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1eca7594-845e-4357-9deb-a65092813313" absoluteBounds="3, 2, 3.125, 1.7708968098958331">
+      <DataClassMoniker Name="/ClaremontSchoolgroupMappingDataContext/ClaremontPlanHistoryData_TagMapping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15a8b6d1-cb9c-4f69-9e5a-2830b0990e66" absoluteBounds="3.015, 2.46, 3.0949999999999998, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="ProcedureScheduleDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ProcedureSchedule" Member="ProcedureSchedules">
+    <Type Name="ProcedureSchedule">
+      <Column Name="ProcedureScheduleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProcedureName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ProcedureExecute" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ProcedureStarted" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ProcedureCompleted" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ExecutionNotes" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProcedureSchedule_RecurrenceTypes" Member="ProcedureSchedule_RecurrenceTypes">
+    <Type Name="ProcedureSchedule_RecurrenceType">
+      <Column Name="ProcedureScheduleRecurrenceTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RecurrenceType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="ProcedureSchedule_RecurrenceType_ProcedureSchedule_Recurrence" Member="ProcedureSchedule_Recurrences" ThisKey="ProcedureScheduleRecurrenceTypeId" OtherKey="ProcedureScheduleRecurrenceTypeId" Type="ProcedureSchedule_Recurrence" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProcedureSchedule_Recurrence" Member="ProcedureSchedule_Recurrences">
+    <Type Name="ProcedureSchedule_Recurrence">
+      <Column Name="ProcedureScheduleRecurranceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProcedureName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ProcedureScheduleRecurrenceTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastExecuteTime" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NextExecuteTime" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Association Name="ProcedureSchedule_RecurrenceType_ProcedureSchedule_Recurrence" Member="ProcedureSchedule_RecurrenceType" ThisKey="ProcedureScheduleRecurrenceTypeId" OtherKey="ProcedureScheduleRecurrenceTypeId" Type="ProcedureSchedule_RecurrenceType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.RunDavidProcs" Method="RunDavidProcs">
+    <ElementType Name="RunDavidProcsResult">
+      <Column Name="MessageQueueId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MessageSubject" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBody" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="MessageSenderAddress" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageRecipientAddress" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageCreatedDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MessageScheduleDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MessageSentDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

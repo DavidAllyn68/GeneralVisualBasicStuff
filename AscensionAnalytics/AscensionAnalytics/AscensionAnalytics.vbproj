@@ -1,0 +1,1739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30831E33-7227-4F63-AD49-95961AA71116}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AscensionAnalytics.My.MyApplication</StartupObject>
+    <RootNamespace>AscensionAnalytics</RootNamespace>
+    <AssemblyName>AscensionAnalytics</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ManifestCertificateThumbprint>2470746957915CF8FAEA21A87610C70F1A64564F</ManifestCertificateThumbprint>
+    <ManifestKeyFile>AscensionAnalytics_2_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>Images\NewAscensionAnalytics.ico</ApplicationIcon>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>\\xserv\Marketing\RenAnalysis\Apps\AscensionAnalytics\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\xserv\Marketing\RenAnalysis\Apps\AscensionAnalytics\</InstallUrl>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>184</ApplicationRevision>
+    <ApplicationVersion>1.2.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AscensionAnalytics.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AscensionAnalytics.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\adodb.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v4, Version=4.0.14.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.ButtonBar.v4, Version=4.0.14.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.CalendarCombo.v4, Version=4.0.14.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.Common.v4, Version=4.0.14.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.ExplorerBar.v4, Version=4.0.14.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.FilterEditor.v4, Version=4.0.14.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.14.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.Ribbon.v4, Version=4.0.14.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.Schedule.v4, Version=4.0.14.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.TimeLine.v4, Version=4.0.14.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.UI.v4, Version=4.0.14.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseClasses\BusinessBase.vb" />
+    <Compile Include="BaseClasses\BusinessItems.vb" />
+    <Compile Include="BaseClasses\ComboListItem.vb" />
+    <Compile Include="BaseClasses\ComboListItems.vb" />
+    <Compile Include="BaseClasses\Conversion.vb" />
+    <Compile Include="BaseClasses\ErrorItem.vb" />
+    <Compile Include="BaseClasses\ErrorItems.vb" />
+    <Compile Include="BaseClasses\FileToSqlLoader.vb" />
+    <Compile Include="BaseClasses\PropertyComparer.vb" />
+    <Compile Include="BaseClasses\DataHelper.vb" />
+    <Compile Include="BaseClasses\SqlStringPrep.vb" />
+    <Compile Include="DataContexts\AetnaData.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AetnaData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AetnaData.vb">
+      <DependentUpon>AetnaData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AggregationSettings.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AggregationSettings.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AggregationSettings.vb">
+      <DependentUpon>AggregationSettings.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AlternateDescriptors.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlternateDescriptors.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AlternateDescriptors.vb">
+      <DependentUpon>AlternateDescriptors.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AmeribenBenefitMapping.vb">
+      <DependentUpon>AmeribenBenefitMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AmeribenData.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AmeribenData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AmeribenData.vb">
+      <DependentUpon>AmeribenData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AmeribenNetworkFees.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AmeribenNetworkFees.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AmeribenNetworkFees.vb">
+      <DependentUpon>AmeribenNetworkFees.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AnalysisRequestTracker.vb">
+      <DependentUpon>AnalysisRequestTracker.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\Analysts.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Analysts.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\Analysts.vb">
+      <DependentUpon>Analysts.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AnthemData.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnthemData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="DataContexts\AnthemData.vb">
+      <DependentUpon>AnthemData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\ClaremontSchoolgroupMapping.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClaremontSchoolgroupMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\ClaremontSchoolgroupMapping.vb">
+      <DependentUpon>ClaremontSchoolgroupMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\DatasourceMaxPaidDate.vb">
+      <DependentUpon>DatasourceMaxPaidDate.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\DW.vb">
+      <DependentUpon>DW.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\EsiGroupMapping.vb">
+      <DependentUpon>EsiGroupMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\EventLog.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventLog.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\HthBenefitMapping.vb">
+      <DependentUpon>HthBenefitMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\HthData.vb">
+      <DependentUpon>HthData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\LineOfBusiness.vb">
+      <DependentUpon>LineOfBusiness.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\LookupTables.vb">
+      <DependentUpon>LookupTables.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\MarketingDbDataInDavid.vb">
+      <DependentUpon>MarketingDbDataInDavid.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\MonthlyExperience.vb">
+      <DependentUpon>MonthlyExperience.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\OverlandParkBTSBenefitMapping.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OverlandParkBTSBenefitMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\OverlandParkBTSBenefitMapping.vb">
+      <DependentUpon>OverlandParkBTSBenefitMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\OverlandParkEnrollmentActivity.vb">
+      <DependentUpon>OverlandParkEnrollmentActivity.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\OverlandParkGroupMapping.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OverlandParkGroupMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\DW.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DW.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\EsiGroupMapping.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EsiGroupMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\GeneralStatistics.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneralStatistics.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\GeneralStatistics.vb">
+      <DependentUpon>GeneralStatistics.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\HthData.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HthData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\LineOfBusiness.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LineOfBusiness.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\MarketingDbDataInDavid.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarketingDbDataInDavid.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\OverlandParkEnrollmentActivity.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OverlandParkEnrollmentActivity.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\OverlandParkGroupMapping.vb">
+      <DependentUpon>OverlandParkGroupMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\OverlandParkTrizzetoBenefitMapping.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OverlandParkTrizzetoBenefitMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\OverlandParkTrizzetoBenefitMapping.vb">
+      <DependentUpon>OverlandParkTrizzetoBenefitMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\PiaBenefitMapping.vb">
+      <DependentUpon>PiaBenefitMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\PolicyOverview.vb">
+      <DependentUpon>PolicyOverview.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\ProcedureSchedule.vb">
+      <DependentUpon>ProcedureSchedule.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\ProgramRating.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramRating.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\ProgramRating.vb">
+      <DependentUpon>ProgramRating.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\ReportViewer.vb">
+      <DependentUpon>ReportViewer.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\SampleReporting.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SampleReporting.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\SampleReporting.vb">
+      <DependentUpon>SampleReporting.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\SchoolAddressInfo.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolAddressInfo.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\SchoolAddressInfo.vb">
+      <DependentUpon>SchoolAddressInfo.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\SchoolgroupLogo.vb">
+      <DependentUpon>SchoolgroupLogo.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\aaaTemplateEditor.Designer.vb">
+      <DependentUpon>aaaTemplateEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\aaaTemplateEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEventLogDetails.Designer.vb">
+      <DependentUpon>frmEventLogDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEventLogDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAetnaBenefitTypes.Designer.vb">
+      <DependentUpon>frmAetnaBenefitTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAetnaBenefitTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAetnaPlaceOfServiceCodes.Designer.vb">
+      <DependentUpon>frmAetnaPlaceOfServiceCodes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAetnaPlaceOfServiceCodes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAetnaBenefitMapping.Designer.vb">
+      <DependentUpon>frmAetnaBenefitMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAetnaBenefitMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOverlandParkBTSBenefitMapping.Designer.vb">
+      <DependentUpon>frmOverlandParkBTSBenefitMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOverlandParkBTSBenefitMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOverlandParkGroups.Designer.vb">
+      <DependentUpon>frmOverlandParkGroups.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOverlandParkGroups.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOverlandParkGroupMapping.Designer.vb">
+      <DependentUpon>frmOverlandParkGroupMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOverlandParkGroupMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOverlandParkEnrollmentActivity.Designer.vb">
+      <DependentUpon>frmOverlandParkEnrollmentActivity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOverlandParkEnrollmentActivity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProcedureSchedule_RecurrenceTypes.Designer.vb">
+      <DependentUpon>frmProcedureSchedule_RecurrenceTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProcedureSchedule_RecurrenceTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProcedureSchedule_Recurrence.Designer.vb">
+      <DependentUpon>frmProcedureSchedule_Recurrence.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProcedureSchedule_Recurrence.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGeneralStatisticsCategoryEditor.Designer.vb">
+      <DependentUpon>frmGeneralStatisticsCategoryEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGeneralStatisticsCategoryEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAetnaGroupMapping.Designer.vb">
+      <DependentUpon>frmAetnaGroupMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAetnaGroupMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGeneralStatisticsEditor.Designer.vb">
+      <DependentUpon>frmGeneralStatisticsEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGeneralStatisticsEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMarketingDb_SchoolgroupMapping.Designer.vb">
+      <DependentUpon>frmMarketingDb_SchoolgroupMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMarketingDb_SchoolgroupMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSchoolgroupLineOfBusinessEditor.Designer.vb">
+      <DependentUpon>frmSchoolgroupLineOfBusinessEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSchoolgroupLineOfBusinessEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLineOfBusinessEditor.Designer.vb">
+      <DependentUpon>frmLineOfBusinessEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLineOfBusinessEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLineOfBusinessCategoryEditor.Designer.vb">
+      <DependentUpon>frmLineOfBusinessCategoryEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLineOfBusinessCategoryEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClaremontSchoolgroupMapping.Designer.vb">
+      <DependentUpon>frmClaremontSchoolgroupMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClaremontSchoolgroupMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisPeopleTypeEditor.Designer.vb">
+      <DependentUpon>frmAnalysisPeopleTypeEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisPeopleTypeEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseBenefitCategories.Designer.vb">
+      <DependentUpon>frmDataWarehouseBenefitCategories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseBenefitCategories.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseServiceCodeType.Designer.vb">
+      <DependentUpon>frmDataWarehouseServiceCodeType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseServiceCodeType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAmeribenNetworkFees.Designer.vb">
+      <DependentUpon>frmAmeribenNetworkFees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAmeribenNetworkFees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisRequestLogListing.Designer.vb">
+      <DependentUpon>frmAnalysisRequestLogListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisRequestLogListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEsiGroupMapping.Designer.vb">
+      <DependentUpon>frmEsiGroupMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEsiGroupMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOverlandParkTrizzetoBenefitMapping.Designer.vb">
+      <DependentUpon>frmOverlandParkTrizzetoBenefitMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOverlandParkTrizzetoBenefitMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHthGroupMapping.Designer.vb">
+      <DependentUpon>frmHthGroupMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHthGroupMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAggregationSettings.Designer.vb">
+      <DependentUpon>frmAggregationSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAggregationSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAmeribenGroupMapping.Designer.vb">
+      <DependentUpon>frmAmeribenGroupMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAmeribenGroupMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisRequestListing.Designer.vb">
+      <DependentUpon>frmAnalysisRequestListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisRequestListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisRequestMilestoneSchedule.Designer.vb">
+      <DependentUpon>frmAnalysisRequestMilestoneSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisRequestMilestoneSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnthemMonthlySummary.Designer.vb">
+      <DependentUpon>frmAnthemMonthlySummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnthemMonthlySummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMonthlyExperience.Designer.vb">
+      <DependentUpon>frmMonthlyExperience.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMonthlyExperience.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProviderGrouping.Designer.vb">
+      <DependentUpon>frmProviderGrouping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProviderGrouping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRatingStatisticTypes.Designer.vb">
+      <DependentUpon>frmRatingStatisticTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRatingStatisticTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportViewerAvailableGroupingItems.Designer.vb">
+      <DependentUpon>frmReportViewerAvailableGroupingItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportViewerAvailableGroupingItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportViewerAvailableReportParameterValues.Designer.vb">
+      <DependentUpon>frmReportViewerAvailableReportParameterValues.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportViewerAvailableReportParameterValues.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportViewerUsers.Designer.vb">
+      <DependentUpon>frmReportViewerUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportViewerUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSampleReportingProcessing.Designer.vb">
+      <DependentUpon>frmSampleReportingProcessing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSampleReportingProcessing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSchoolAddressInfo.Designer.vb">
+      <DependentUpon>frmSchoolAddressInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSchoolAddressInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSchoolgroupLogo.Designer.vb">
+      <DependentUpon>frmSchoolgroupLogo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSchoolgroupLogo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataContexts\LookupTables.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LookupTables.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\DataWarehouse.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataWarehouse.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\DataWarehouse.vb">
+      <DependentUpon>DataWarehouse.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\DataWarehouseMessageQueue.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataWarehouseMessageQueue.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\DataWarehouseMessageQueue.vb">
+      <DependentUpon>DataWarehouseMessageQueue.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseBenefits.Designer.vb">
+      <DependentUpon>frmDataWarehouseBenefits.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseBenefits.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FlatStyle.Designer.vb">
+      <DependentUpon>FlatStyle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FlatStyle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAmeribenBenefitMapping.Designer.vb">
+      <DependentUpon>frmAmeribenBenefitMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAmeribenBenefitMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataContexts\AnalysisRequestTracker.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnalysisRequestTracker.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\AmeribenBenefitMapping.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AmeribenBenefitMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\DatasourceMaxPaidDate.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasourceMaxPaidDate.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\Datasources.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datasources.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\Datasources.vb">
+      <DependentUpon>Datasources.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\DistriubtionTiers.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DistriubtionTiers.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\DistriubtionTiers.vb">
+      <DependentUpon>DistriubtionTiers.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAlternateDescriptorEditor.Designer.vb">
+      <DependentUpon>frmAlternateDescriptorEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAlternateDescriptorEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisPeopleEditor.Designer.vb">
+      <DependentUpon>frmAnalysisPeopleEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisPeopleEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisRequestStatusEditor.Designer.vb">
+      <DependentUpon>frmAnalysisRequestStatusEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisRequestStatusEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisRequestTypeEditor.Designer.vb">
+      <DependentUpon>frmAnalysisRequestTypeEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisRequestTypeEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmApplicationIntro.Designer.vb">
+      <DependentUpon>frmApplicationIntro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmApplicationIntro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDatasourceEditor.Designer.vb">
+      <DependentUpon>frmDatasourceEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDatasourceEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDatasourceMaxPaidDate.Designer.vb">
+      <DependentUpon>frmDatasourceMaxPaidDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDatasourceMaxPaidDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseDiagnoses.Designer.vb">
+      <DependentUpon>frmDataWarehouseDiagnoses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseDiagnoses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseDiagnosisCategories.Designer.vb">
+      <DependentUpon>frmDataWarehouseDiagnosisCategories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseDiagnosisCategories.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseDiagnosisCodeType.Designer.vb">
+      <DependentUpon>frmDataWarehouseDiagnosisCodeType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseDiagnosisCodeType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseMessageQueue.Designer.vb">
+      <DependentUpon>frmDataWarehouseMessageQueue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseMessageQueue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseServices.Designer.vb">
+      <DependentUpon>frmDataWarehouseServices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseServices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseTypeOfService.Designer.vb">
+      <DependentUpon>frmDataWarehouseTypeOfService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseTypeOfService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseTypeOfServiceCategory.Designer.vb">
+      <DependentUpon>frmDataWarehouseTypeOfServiceCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseTypeOfServiceCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseTypeOfServiceSubCategory.Designer.vb">
+      <DependentUpon>frmDataWarehouseTypeOfServiceSubCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataWarehouseTypeOfServiceSubCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDistributionsEditor.Designer.vb">
+      <DependentUpon>frmDistributionsEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDistributionsEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHthBenefitMapping.Designer.vb">
+      <DependentUpon>frmHthBenefitMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHthBenefitMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMooBenefitMapping.Designer.vb">
+      <DependentUpon>frmMooBenefitMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMooBenefitMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPiaBenefitMapping.Designer.vb">
+      <DependentUpon>frmPiaBenefitMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPiaBenefitMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProcedureSchedule.Designer.vb">
+      <DependentUpon>frmProcedureSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProcedureSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSchoolgroupAssignmentsEditor.Designer.vb">
+      <DependentUpon>frmSchoolgroupAssignmentsEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSchoolgroupAssignmentsEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSchoolgroupAssignmentTypeEditor.Designer.vb">
+      <DependentUpon>frmSchoolgroupAssignmentTypeEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSchoolgroupAssignmentTypeEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataContexts\HthBenefitMapping.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HthBenefitMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="mdiMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiMain.Designer.vb">
+      <DependentUpon>mdiMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataContexts\MonthlyExperience.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyExperience.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\MooData.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MooData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\MooData.vb">
+      <DependentUpon>MooData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Forms\frmSchoolgroupGroupsEditor.Designer.vb">
+      <DependentUpon>frmSchoolgroupGroupsEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSchoolgroupGroupsEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisRequestDetail.Designer.vb">
+      <DependentUpon>frmAnalysisRequestDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnalysisRequestDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectHelper.vb" />
+    <Compile Include="DataContexts\PiaBenefitMapping.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PiaBenefitMapping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\PolicyOverview.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolicyOverview.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\ProcedureSchedule.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProcedureSchedule.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\ProviderGrouping.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProviderGrouping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\ProviderGrouping.vb">
+      <DependentUpon>ProviderGrouping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\ReportViewer.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportViewer.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportViewerFilters.Designer.vb">
+      <DependentUpon>frmReportViewerFilters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportViewerFilters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataContexts\SchoolgroupAssignments.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolgroupAssignments.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\SchoolgroupAssignments.vb">
+      <DependentUpon>SchoolgroupAssignments.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\SchoolgroupGroups.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolgroupGroups.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\SchoolgroupGroups.vb">
+      <DependentUpon>SchoolgroupGroups.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\SchoolgroupLogo.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolgroupLogo.dbml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataContexts\AnalysisRequestTracker.dbml.layout">
+      <DependentUpon>AnalysisRequestTracker.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\AlternateDescriptors.dbml.layout">
+      <DependentUpon>AlternateDescriptors.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\DistriubtionTiers.dbml.layout">
+      <DependentUpon>DistriubtionTiers.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\DatasourceMaxPaidDate.dbml.layout">
+      <DependentUpon>DatasourceMaxPaidDate.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\Datasources.dbml.layout">
+      <DependentUpon>Datasources.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\AmeribenBenefitMapping.dbml.layout">
+      <DependentUpon>AmeribenBenefitMapping.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\DataWarehouse.dbml.layout">
+      <DependentUpon>DataWarehouse.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\DataWarehouseMessageQueue.dbml.layout">
+      <DependentUpon>DataWarehouseMessageQueue.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\AmeribenData.dbml.layout">
+      <DependentUpon>AmeribenData.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\AggregationSettings.dbml.layout">
+      <DependentUpon>AggregationSettings.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\AnthemData.dbml.layout">
+      <DependentUpon>AnthemData.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\HthData.dbml.layout">
+      <DependentUpon>HthData.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\OverlandParkTrizzetoBenefitMapping.dbml.layout">
+      <DependentUpon>OverlandParkTrizzetoBenefitMapping.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\AmeribenNetworkFees.dbml.layout">
+      <DependentUpon>AmeribenNetworkFees.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\SampleReporting.dbml.layout">
+      <DependentUpon>SampleReporting.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\EsiGroupMapping.dbml.layout">
+      <DependentUpon>EsiGroupMapping.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\ProgramRating.dbml.layout">
+      <DependentUpon>ProgramRating.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\SchoolAddressInfo.dbml.layout">
+      <DependentUpon>SchoolAddressInfo.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\DW.dbml.layout">
+      <DependentUpon>DW.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\ClaremontSchoolgroupMapping.dbml.layout">
+      <DependentUpon>ClaremontSchoolgroupMapping.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\LineOfBusiness.dbml.layout">
+      <DependentUpon>LineOfBusiness.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\MarketingDbDataInDavid.dbml.layout">
+      <DependentUpon>MarketingDbDataInDavid.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\AetnaData.dbml.layout">
+      <DependentUpon>AetnaData.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\GeneralStatistics.dbml.layout">
+      <DependentUpon>GeneralStatistics.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\OverlandParkEnrollmentActivity.dbml.layout">
+      <DependentUpon>OverlandParkEnrollmentActivity.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\OverlandParkGroupMapping.dbml.layout">
+      <DependentUpon>OverlandParkGroupMapping.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\OverlandParkBTSBenefitMapping.dbml.layout">
+      <DependentUpon>OverlandParkBTSBenefitMapping.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\Analysts.dbml.layout">
+      <DependentUpon>Analysts.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\EventLog.dbml.layout">
+      <DependentUpon>EventLog.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Forms\aaaTemplateEditor.resx">
+      <DependentUpon>aaaTemplateEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEventLogDetails.resx">
+      <DependentUpon>frmEventLogDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAetnaBenefitTypes.resx">
+      <DependentUpon>frmAetnaBenefitTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAetnaPlaceOfServiceCodes.resx">
+      <DependentUpon>frmAetnaPlaceOfServiceCodes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAetnaBenefitMapping.resx">
+      <DependentUpon>frmAetnaBenefitMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOverlandParkBTSBenefitMapping.resx">
+      <DependentUpon>frmOverlandParkBTSBenefitMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOverlandParkGroups.resx">
+      <DependentUpon>frmOverlandParkGroups.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOverlandParkGroupMapping.resx">
+      <DependentUpon>frmOverlandParkGroupMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOverlandParkEnrollmentActivity.resx">
+      <DependentUpon>frmOverlandParkEnrollmentActivity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProcedureSchedule_RecurrenceTypes.resx">
+      <DependentUpon>frmProcedureSchedule_RecurrenceTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProcedureSchedule_Recurrence.resx">
+      <DependentUpon>frmProcedureSchedule_Recurrence.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGeneralStatisticsCategoryEditor.resx">
+      <DependentUpon>frmGeneralStatisticsCategoryEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAetnaGroupMapping.resx">
+      <DependentUpon>frmAetnaGroupMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGeneralStatisticsEditor.resx">
+      <DependentUpon>frmGeneralStatisticsEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMarketingDb_SchoolgroupMapping.resx">
+      <DependentUpon>frmMarketingDb_SchoolgroupMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSchoolgroupLineOfBusinessEditor.resx">
+      <DependentUpon>frmSchoolgroupLineOfBusinessEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLineOfBusinessEditor.resx">
+      <DependentUpon>frmLineOfBusinessEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLineOfBusinessCategoryEditor.resx">
+      <DependentUpon>frmLineOfBusinessCategoryEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmClaremontSchoolgroupMapping.resx">
+      <DependentUpon>frmClaremontSchoolgroupMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAnalysisPeopleTypeEditor.resx">
+      <DependentUpon>frmAnalysisPeopleTypeEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDataWarehouseBenefitCategories.resx">
+      <DependentUpon>frmDataWarehouseBenefitCategories.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDataWarehouseServiceCodeType.resx">
+      <DependentUpon>frmDataWarehouseServiceCodeType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAmeribenNetworkFees.resx">
+      <DependentUpon>frmAmeribenNetworkFees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAnalysisRequestLogListing.resx">
+      <DependentUpon>frmAnalysisRequestLogListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEsiGroupMapping.resx">
+      <DependentUpon>frmEsiGroupMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOverlandParkTrizzetoBenefitMapping.resx">
+      <DependentUpon>frmOverlandParkTrizzetoBenefitMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAggregationSettings.resx">
+      <DependentUpon>frmAggregationSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAmeribenGroupMapping.resx">
+      <DependentUpon>frmAmeribenGroupMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAnalysisRequestListing.resx">
+      <DependentUpon>frmAnalysisRequestListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataContexts\LookupTables.dbml.layout">
+      <DependentUpon>LookupTables.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Forms\frmAnalysisRequestMilestoneSchedule.resx">
+      <DependentUpon>frmAnalysisRequestMilestoneSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAnthemMonthlySummary.resx">
+      <DependentUpon>frmAnthemMonthlySummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHthGroupMapping.resx">
+      <DependentUpon>frmHthGroupMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMonthlyExperience.resx">
+      <DependentUpon>frmMonthlyExperience.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProviderGrouping.resx">
+      <DependentUpon>frmProviderGrouping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRatingStatisticTypes.resx">
+      <DependentUpon>frmRatingStatisticTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportViewerAvailableGroupingItems.resx">
+      <DependentUpon>frmReportViewerAvailableGroupingItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportViewerAvailableReportParameterValues.resx">
+      <DependentUpon>frmReportViewerAvailableReportParameterValues.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportViewerUsers.resx">
+      <DependentUpon>frmReportViewerUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSampleReportingProcessing.resx">
+      <DependentUpon>frmSampleReportingProcessing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSchoolAddressInfo.resx">
+      <DependentUpon>frmSchoolAddressInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSchoolgroupLogo.resx">
+      <DependentUpon>frmSchoolgroupLogo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDataWarehouseBenefits.resx">
+      <DependentUpon>frmDataWarehouseBenefits.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FlatStyle.resx">
+      <DependentUpon>FlatStyle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAmeribenBenefitMapping.resx">
+      <DependentUpon>frmAmeribenBenefitMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAlternateDescriptorEditor.resx">
+      <DependentUpon>frmAlternateDescriptorEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAnalysisPeopleEditor.resx">
+      <DependentUpon>frmAnalysisPeopleEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAnalysisRequestStatusEditor.resx">
+      <DependentUpon>frmAnalysisRequestStatusEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAnalysisRequestTypeEditor.resx">
+      <DependentUpon>frmAnalysisRequestTypeEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmApplicationIntro.resx">
+      <DependentUpon>frmApplicationIntro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDatasourceEditor.resx">
+      <DependentUpon>frmDatasourceEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDatasourceMaxPaidDate.resx">
+      <DependentUpon>frmDatasourceMaxPaidDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDataWarehouseDiagnoses.resx">
+      <DependentUpon>frmDataWarehouseDiagnoses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDataWarehouseDiagnosisCategories.resx">
+      <DependentUpon>frmDataWarehouseDiagnosisCategories.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDataWarehouseDiagnosisCodeType.resx">
+      <DependentUpon>frmDataWarehouseDiagnosisCodeType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDataWarehouseMessageQueue.resx">
+      <DependentUpon>frmDataWarehouseMessageQueue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDataWarehouseServices.resx">
+      <DependentUpon>frmDataWarehouseServices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDataWarehouseTypeOfService.resx">
+      <DependentUpon>frmDataWarehouseTypeOfService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDataWarehouseTypeOfServiceCategory.resx">
+      <DependentUpon>frmDataWarehouseTypeOfServiceCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDataWarehouseTypeOfServiceSubCategory.resx">
+      <DependentUpon>frmDataWarehouseTypeOfServiceSubCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDistributionsEditor.resx">
+      <DependentUpon>frmDistributionsEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHthBenefitMapping.resx">
+      <DependentUpon>frmHthBenefitMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMooBenefitMapping.resx">
+      <DependentUpon>frmMooBenefitMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPiaBenefitMapping.resx">
+      <DependentUpon>frmPiaBenefitMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProcedureSchedule.resx">
+      <DependentUpon>frmProcedureSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSchoolgroupAssignmentsEditor.resx">
+      <DependentUpon>frmSchoolgroupAssignmentsEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSchoolgroupAssignmentTypeEditor.resx">
+      <DependentUpon>frmSchoolgroupAssignmentTypeEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataContexts\HthBenefitMapping.dbml.layout">
+      <DependentUpon>HthBenefitMapping.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="mdiMain.resx">
+      <DependentUpon>mdiMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataContexts\MooData.dbml.layout">
+      <DependentUpon>MooData.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\MonthlyExperience.dbml.layout">
+      <DependentUpon>MonthlyExperience.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSchoolgroupGroupsEditor.resx">
+      <DependentUpon>frmSchoolgroupGroupsEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAnalysisRequestDetail.resx">
+      <DependentUpon>frmAnalysisRequestDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportViewerFilters.resx">
+      <DependentUpon>frmReportViewerFilters.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataContexts\SchoolgroupLogo.dbml.layout">
+      <DependentUpon>SchoolgroupLogo.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\ProviderGrouping.dbml.layout">
+      <DependentUpon>ProviderGrouping.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\ReportViewer.dbml.layout">
+      <DependentUpon>ReportViewer.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\PolicyOverview.dbml.layout">
+      <DependentUpon>PolicyOverview.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\PiaBenefitMapping.dbml.layout">
+      <DependentUpon>PiaBenefitMapping.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\ProcedureSchedule.dbml.layout">
+      <DependentUpon>ProcedureSchedule.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\SchoolgroupAssignments.dbml.layout">
+      <DependentUpon>SchoolgroupAssignments.dbml</DependentUpon>
+    </None>
+    <None Include="DataContexts\SchoolgroupGroups.dbml.layout">
+      <DependentUpon>SchoolgroupGroups.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataContexts\AlternateDescriptors.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AlternateDescriptors.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\AnalysisRequestTracker.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AnalysisRequestTracker.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.config" />
+    <None Include="DataContexts\DatasourceMaxPaidDate.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DatasourceMaxPaidDate.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\DistriubtionTiers.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DistriubtionTiers.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\AnalysisRequest.datasource" />
+    <None Include="My Project\DataSources\AnalysisRequestLog.datasource" />
+    <None Include="My Project\DataSources\AnalysisRequestStatus.datasource" />
+    <None Include="My Project\DataSources\AnalysisRequestType.datasource" />
+    <None Include="My Project\DataSources\cc_AlternateDescriptor.datasource" />
+    <None Include="My Project\DataSources\DatasourceMaxPaidDate.datasource" />
+    <None Include="My Project\DataSources\Distribution.datasource" />
+    <None Include="My Project\DataSources\DistributionTier.datasource" />
+    <None Include="My Project\DataSources\schoolgroups_selectAssociatedResult.datasource" />
+    <None Include="My Project\DataSources\schoolgroups_selectNotAssociatedResult.datasource" />
+    <None Include="My Project\DataSources\schoolgroup_group.datasource" />
+    <None Include="My Project\DataSources\schoolgroup_group_x_schoolgroup.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="RenAnalysis_TemporaryKey.pfx" />
+    <None Include="DataContexts\SchoolgroupGroups.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SchoolgroupGroups.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AscensionAnalytics_1_TemporaryKey.pfx" />
+    <None Include="AscensionAnalytics_2_TemporaryKey.pfx" />
+    <None Include="DataContexts\AetnaData.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AetnaData.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\AggregationSettings.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AggregationSettings.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\AmeribenData.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AmeribenData.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\AmeribenNetworkFees.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AmeribenNetworkFees.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\Analysts.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Analysts.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\AnthemData.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AnthemData.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\ClaremontSchoolgroupMapping.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ClaremontSchoolgroupMapping.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\EventLog.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>EventLog.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\OverlandParkBTSBenefitMapping.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OverlandParkBTSBenefitMapping.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\OverlandParkGroupMapping.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OverlandParkGroupMapping.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\DW.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DW.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\EsiGroupMapping.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>EsiGroupMapping.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\GeneralStatistics.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>GeneralStatistics.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\HthData.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HthData.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\DataWarehouse.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataWarehouse.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\DataWarehouseMessageQueue.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataWarehouseMessageQueue.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\LineOfBusiness.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LineOfBusiness.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\MarketingDbDataInDavid.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MarketingDbDataInDavid.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\OverlandParkEnrollmentActivity.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OverlandParkEnrollmentActivity.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\OverlandParkTrizzetoBenefitMapping.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OverlandParkTrizzetoBenefitMapping.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\ProgramRating.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ProgramRating.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\SampleReporting.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SampleReporting.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\SchoolAddressInfo.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SchoolAddressInfo.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Images\Ascension-Analytics-Logo-%28200x200%29.png" />
+    <None Include="Images\AscensionAnalyticsLogo.ico" />
+    <Content Include="Images\ChooseFolder 32x32.png" />
+    <None Include="Images\NewAscensionLogo.jpg" />
+    <None Include="Images\NewAscensionLogo.ico" />
+    <None Include="Images\NewAscensionAnalytics.png" />
+    <None Include="Images\NewAscensionAnalytics.ico" />
+    <Content Include="Images\RemoveItem.png" />
+    <Content Include="Images\ReportBy_Template.png" />
+    <Content Include="Images\Save.png" />
+    <Content Include="Images\Sum.ico" />
+    <None Include="My Project\DataSources\Aetna_AscensionBenefit.datasource" />
+    <None Include="My Project\DataSources\Aetna_BenefitMapping.datasource" />
+    <None Include="My Project\DataSources\Aetna_BenefitType.datasource" />
+    <None Include="My Project\DataSources\Aetna_PlaceOfServiceCode.datasource" />
+    <None Include="My Project\DataSources\Analyst.datasource" />
+    <None Include="My Project\DataSources\AnalystAnalysisPeople.datasource" />
+    <None Include="My Project\DataSources\AnalystRole.datasource" />
+    <None Include="My Project\DataSources\David_EventLog_Detail.datasource" />
+    <None Include="My Project\DataSources\HTH_GROUP.datasource" />
+    <None Include="Resources\NewAscensionLogo.ico" />
+    <None Include="Resources\New_Ascension_Logo.bmp" />
+    <None Include="DataContexts\AmeribenBenefitMapping.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AmeribenBenefitMapping.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\Datasources.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Datasources.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\HthBenefitMapping.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HthBenefitMapping.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Images\Sum.png" />
+    <None Include="DataContexts\LookupTables.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LookupTables.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\MonthlyExperience.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MonthlyExperience.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\MooData.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MooData.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\DataSources\adw_Underwriter.datasource" />
+    <None Include="My Project\DataSources\Aetna_GroupMapping.datasource" />
+    <None Include="My Project\DataSources\AggregationSetting.datasource" />
+    <None Include="My Project\DataSources\Ameriben_BenefitMapping.datasource" />
+    <None Include="My Project\DataSources\Ameriben_GroupMap.datasource" />
+    <None Include="My Project\DataSources\Ameriben_NetworkFee.datasource" />
+    <None Include="My Project\DataSources\Ameriben_POS.datasource" />
+    <None Include="My Project\DataSources\Ameriben_TOS.datasource" />
+    <None Include="My Project\DataSources\AnalysisRequestPeople.datasource" />
+    <None Include="My Project\DataSources\AnalysisRole.datasource" />
+    <None Include="My Project\DataSources\AnthemSchoolGroup.datasource" />
+    <None Include="My Project\DataSources\anthem_claims_summary.datasource" />
+    <None Include="My Project\DataSources\ClaremontPlanHistoryData_TagMapping.datasource" />
+    <None Include="My Project\DataSources\Claremont_SchoolgroupMapping.datasource" />
+    <None Include="My Project\DataSources\Datasource.datasource" />
+    <None Include="My Project\DataSources\DataWarehouseBenefitCategory.datasource" />
+    <None Include="My Project\DataSources\DataWarehouseBenefits.datasource" />
+    <None Include="My Project\DataSources\DataWarehouseDatasources.datasource" />
+    <None Include="My Project\DataSources\DataWarehouseDiagnoses.datasource" />
+    <None Include="My Project\DataSources\DataWarehouseDiagnosisCategories.datasource" />
+    <None Include="My Project\DataSources\DataWarehouseDiagnosisCodeType.datasource" />
+    <None Include="My Project\DataSources\DataWarehouseServiceCodeType.datasource" />
+    <None Include="My Project\DataSources\DataWarehouseServices.datasource" />
+    <None Include="My Project\DataSources\DataWarehouseTypeOfService.datasource" />
+    <None Include="My Project\DataSources\DataWarehouseTypeOfServiceCategory.datasource" />
+    <None Include="My Project\DataSources\DataWarehouseTypeOfServiceSubCategory.datasource" />
+    <None Include="My Project\DataSources\ESI_Group_Map.datasource" />
+    <None Include="My Project\DataSources\GeneralStatistics_Category.datasource" />
+    <None Include="My Project\DataSources\GeneralStatistics_DevelopedStatistic.datasource" />
+    <None Include="My Project\DataSources\GeneralStatistics_Statistic.datasource" />
+    <None Include="My Project\DataSources\HthDataSchoolgroups.datasource" />
+    <None Include="My Project\DataSources\HTH_BenefitMapping.datasource" />
+    <None Include="My Project\DataSources\HTH_BENEFITS.datasource" />
+    <None Include="My Project\DataSources\HTH_GROUPS_MAP1.datasource" />
+    <None Include="My Project\DataSources\HTH_POS.datasource" />
+    <None Include="My Project\DataSources\LineOfBusiness.datasource" />
+    <None Include="My Project\DataSources\LineOfBusinessCategory.datasource" />
+    <None Include="My Project\DataSources\LookupAnalysisPeople.datasource" />
+    <None Include="My Project\DataSources\LookupSchoolgroup.datasource" />
+    <None Include="My Project\DataSources\MarketingDb_School.datasource" />
+    <None Include="My Project\DataSources\MarketingDB_SchoolgroupMapping.datasource" />
+    <None Include="My Project\DataSources\MessageQueue.datasource" />
+    <None Include="My Project\DataSources\monthly_experience.datasource" />
+    <None Include="My Project\DataSources\MOO_Benefit.datasource" />
+    <None Include="My Project\DataSources\MOO_BenefitMapping.datasource" />
+    <None Include="My Project\DataSources\OPBTS_BenefitMapping_AscensionBenefit.datasource" />
+    <None Include="My Project\DataSources\OverlandParkBTS_BenefitCode.datasource" />
+    <None Include="My Project\DataSources\OverlandParkBTS_BenefitMapping.datasource" />
+    <None Include="My Project\DataSources\OverlandParkTrizzetoMapping_AscensionBenefit.datasource" />
+    <None Include="My Project\DataSources\OverlandParkTrizzeto_BenefitMapping.datasource" />
+    <None Include="My Project\DataSources\OverlandParkTrizzeto_PlaceOfService.datasource" />
+    <None Include="My Project\DataSources\OverlandPark_EnrollmentActivity.datasource" />
+    <None Include="My Project\DataSources\OverlandPark_Enrollment_Group.datasource" />
+    <None Include="My Project\DataSources\OverlandPark_Group.datasource" />
+    <None Include="My Project\DataSources\OverlandPark_GroupMapping.datasource" />
+    <None Include="My Project\DataSources\PiaMapping_AscensionBenefits.datasource" />
+    <None Include="My Project\DataSources\PIA_BenefitMapping.datasource" />
+    <None Include="My Project\DataSources\PIA_Benefits.datasource" />
+    <None Include="My Project\DataSources\PolicyYear.datasource" />
+    <None Include="My Project\DataSources\policy_overview.datasource" />
+    <None Include="My Project\DataSources\ProcedureSchedule.datasource" />
+    <None Include="My Project\DataSources\ProcedureSchedule_Recurrence.datasource" />
+    <None Include="My Project\DataSources\ProcedureSchedule_RecurrenceType.datasource" />
+    <None Include="My Project\DataSources\ProviderGroup.datasource" />
+    <None Include="My Project\DataSources\ProviderGroupProvider.datasource" />
+    <None Include="My Project\DataSources\ProviderGroupType.datasource" />
+    <None Include="My Project\DataSources\Rating_PolicyStatistic.datasource" />
+    <None Include="My Project\DataSources\Rating_StatisticType.datasource" />
+    <None Include="My Project\DataSources\ReportViewer_AvailableGroupingItem.datasource" />
+    <None Include="My Project\DataSources\ReportViewer_AvailableReportParameterValue.datasource" />
+    <None Include="My Project\DataSources\ReportViewer_RecordFilter.datasource" />
+    <None Include="My Project\DataSources\ReportViewer_User.datasource" />
+    <None Include="My Project\DataSources\SampleReporting_SchoolgroupsToProcess.datasource" />
+    <None Include="My Project\DataSources\SchoolAddressInfo.datasource" />
+    <None Include="My Project\DataSources\SchoolgroupAssignment.datasource" />
+    <None Include="My Project\DataSources\SchoolgroupAssignmentSchoolgroup.datasource" />
+    <None Include="My Project\DataSources\SchoolgroupAssignmentType.datasource" />
+    <None Include="My Project\DataSources\SchoolgroupLineOfBusiness.datasource" />
+    <None Include="My Project\DataSources\schoolgroup_group_schoolgroups.datasource" />
+    <None Include="My Project\DataSources\schoolgroup_logo.datasource" />
+    <None Include="My Project\DataSources\schoolgroup_logo_schoolgroups.datasource" />
+    <None Include="My Project\DataSources\schoolgroup_scoring.datasource" />
+    <None Include="DataContexts\PiaBenefitMapping.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PiaBenefitMapping.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\PolicyOverview.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PolicyOverview.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\ProcedureSchedule.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ProcedureSchedule.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\ProviderGrouping.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ProviderGrouping.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\ReportViewer.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ReportViewer.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\SchoolgroupAssignments.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SchoolgroupAssignments.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataContexts\SchoolgroupLogo.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SchoolgroupLogo.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="ADODB">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Janus.Data.v4">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Janus.Windows.ButtonBar.v4">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Janus.Windows.CalendarCombo.v4">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Janus.Windows.Common.v4">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Janus.Windows.ExplorerBar.v4">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Janus.Windows.FilterEditor.v4">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Janus.Windows.GridEX.v4">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Janus.Windows.Ribbon.v4">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Janus.Windows.Schedule.v4">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Janus.Windows.TimeLine.v4">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Janus.Windows.UI.v4">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

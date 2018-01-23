@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="ProgramRatingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Rating_StatisticTypes" Member="Rating_StatisticTypes">
+    <Type Name="Rating_StatisticType">
+      <Column Name="StatisticTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StatisticTypeName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="StatisticTypeDescription" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Association Name="Rating_StatisticType_Rating_PolicyStatistic" Member="Rating_PolicyStatistics" ThisKey="StatisticTypeId" OtherKey="StatisticTypeId" Type="Rating_PolicyStatistic" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rating_PolicyStatistics" Member="Rating_PolicyStatistics">
+    <Type Name="Rating_PolicyStatistic">
+      <Column Name="PolicyStatisticId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="policyid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StatisticTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StatisticValue" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Rating_StatisticType_Rating_PolicyStatistic" Member="Rating_StatisticType" ThisKey="StatisticTypeId" OtherKey="StatisticTypeId" Type="Rating_StatisticType" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

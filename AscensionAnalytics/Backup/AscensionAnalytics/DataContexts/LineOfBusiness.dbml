@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="LineOfBusinessDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.LineOfBusiness" Member="LineOfBusinesses">
+    <Type Name="LineOfBusiness">
+      <Column Name="LineOfBusinessId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LineOfBusiness" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LineOfBusinessCategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="LineOfBusiness_SchoolgroupLineOfBusiness" Member="SchoolgroupLineOfBusinesses" ThisKey="LineOfBusinessId" OtherKey="LineOfBusinessId" Type="SchoolgroupLineOfBusiness" />
+      <Association Name="LineOfBusinessCategory_LineOfBusiness" Member="LineOfBusinessCategory" ThisKey="LineOfBusinessCategoryId" OtherKey="LineOfBusinessCategoryId" Type="LineOfBusinessCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LineOfBusinessCategories" Member="LineOfBusinessCategories">
+    <Type Name="LineOfBusinessCategory">
+      <Column Name="LineOfBusinessCategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LineOfBusinessCategory" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="LineOfBusinessCategory_LineOfBusiness" Member="LineOfBusinesses" ThisKey="LineOfBusinessCategoryId" OtherKey="LineOfBusinessCategoryId" Type="LineOfBusiness" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SchoolgroupLineOfBusiness" Member="SchoolgroupLineOfBusinesses">
+    <Type Name="SchoolgroupLineOfBusiness">
+      <Column Name="SchoolgroupLineOfBusinessId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SchoolgroupCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LineOfBusinessId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="LineOfBusiness_SchoolgroupLineOfBusiness" Member="LineOfBusiness" ThisKey="LineOfBusinessId" OtherKey="LineOfBusinessId" Type="LineOfBusiness" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

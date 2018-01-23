@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="David" Class="PolicyOverviewDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REN-SQL2;Initial Catalog=David;Integrated Security=True" SettingsObjectName="AscensionAnalytics.My.MySettings" SettingsPropertyName="DavidConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.policy_overview" Member="policy_overviews">
+    <Type Name="policy_overview">
+      <Column Name="asof_dt" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="curr_policyyearid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="curr_policyyear" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="prev_policyyearid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prev_policyyear" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="prev2_policyyear" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="prev3_policyyear" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="policyid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="schoolgroup_cd" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="schoolgroup_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="underwriter_cd" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="underwriter_nm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="policyyear" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="policyyearid" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="TD" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="book_premium" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="POT_First_Year" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CF_First_Year" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="POT_Second_Year" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CF_Second_Year" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="POT_Third_Year" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CF_Third_Year" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[100K_tot_paid]" Member="_100K_tot_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[100K_num_claims]" Member="_100K_num_claims" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[50K_tot_paid]" Member="_50K_tot_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[50K_num_claims]" Member="_50K_num_claims" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[25K_tot_paid]" Member="_25K_tot_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[25K_num_claims]" Member="_25K_num_claims" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[10K_tot_paid]" Member="_10K_tot_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[10K_num_claims]" Member="_10K_num_claims" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[5K_tot_paid]" Member="_5K_tot_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[5K_num_claims]" Member="_5K_num_claims" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[1K_tot_paid]" Member="_1K_tot_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[1K_num_claims]" Member="_1K_num_claims" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[0K_tot_paid]" Member="_0K_tot_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[0K_num_claims]" Member="_0K_num_claims" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BBL_tot_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BBL_num_claims" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="student_enrollees" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="student_not_utilizing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="student_utilizing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="student_num_claims" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="student_tot_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="dependent_enrollees" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dependent_not_utilizing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dependent_utilizing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dependent_num_claims" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dependent_tot_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[1mo_POT_prem]" Member="_1mo_POT_prem" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[1mo_POT_paid]" Member="_1mo_POT_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[3mo_POT_prem]" Member="_3mo_POT_prem" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[3mo_POT_paid]" Member="_3mo_POT_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[6mo_POT_prem]" Member="_6mo_POT_prem" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[6mo_POT_paid]" Member="_6mo_POT_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[9mo_POT_prem]" Member="_9mo_POT_prem" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[9mo_POT_paid]" Member="_9mo_POT_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[12mo_POT_prem]" Member="_12mo_POT_prem" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[12mo_POT_paid]" Member="_12mo_POT_paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="proj_book" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+      <Column Name="member_months" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="member_months_3mo" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="member_months_6mo" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="member_months_9mo" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
